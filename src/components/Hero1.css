@@ -1,0 +1,59 @@
+/* کانتینر دکمه */
+.hero1-btn-container {
+    transition: all 0.3s ease;
+  }
+  
+  /* خود دکمه */
+  .hero1-btn {
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  /* ریسپانسیو موبایل زیر 992 پیکسل */
+  @media (max-width: 991.98px) {
+    .hero1-btn-container {
+      position: static !important;  /* از absolute به حالت عادی تغییر می‌کنیم */
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: center;
+      z-index: auto;
+    }
+    
+    .hero1-btn {
+      padding: 0.4rem 1.2rem !important; /* کوچیک‌تر */
+      font-size: 0.9rem;
+      gap: 0.5rem !important;
+      max-width: 180px;
+    }
+  
+    .hero1-btn img {
+      height: 40px !important;
+      width: 40px !important;
+    }
+  }
+  
+  .btn-prev,
+.btn-next {
+  background-color: #007bff; /* رنگ آبی بوت‌استرپ */
+  color: white;
+  border-radius: 30px; /* گردی بیشتر */
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+  border: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-prev:hover,
+.btn-next:hover {
+  background-color: #0056b3; /* رنگ تیره‌تر روی هاور */
+  box-shadow: 0 6px 12px rgba(0, 86, 179, 0.5);
+  transform: translateY(-3px); /* کمی بالا رفتن */
+}
+
+.btn-prev:active,
+.btn-next:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0, 86, 179, 0.3);
+}

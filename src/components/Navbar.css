@@ -1,0 +1,38 @@
+.top-bar {
+  background-color: yellow;
+  max-width: 85%;
+  margin: 0 auto;
+  border-radius: 10px 10px 0 0; /* فقط بالا گرد، پایین صاف */
+}
+
+
+.top-icons a {
+  color: black; /* آیکون‌ها مشکی باشن که رو زرد دیده شن */
+  font-size: 1.2rem;
+}
+
+.mobile-cart-icon {
+  position: absolute;
+  left: 10px; /* یا هر فاصله‌ای که دوست داری */
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+@media (max-width: 992px) {
+  .top-bar {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+.navbar a {
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffc107; /* زردِ خوشگل موقع هاور */
+}
+
+.navbar-wrapper {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}

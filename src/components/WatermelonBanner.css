@@ -1,0 +1,136 @@
+.watermelon-banner {
+    position: relative;
+    background-color: #a8e6a1;
+    background-image:
+      radial-gradient(circle at 25% 20%, rgba(255, 166, 0, 0.159) 100px, transparent 140px),
+      radial-gradient(circle at 25% 20%, rgba(255, 166, 0, 0.159) 100px, transparent 140px),
+      radial-gradient(circle at 60% 50%, rgba(255, 166, 0, 0.248) 120px, transparent 160px),
+      radial-gradient(circle at 80% 80%, rgba(255, 166, 0, 0.282) 90px, transparent 130px);
+      
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    padding: 45px 20px 30px !important; /* کوچیک‌تر شد */
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    overflow: hidden;
+    min-height: 200px !important;
+  }
+  
+  .top-text {
+    position:absolute;
+    top: -130px; /* بالاتر از نوار */
+    left: 50%;
+
+    font-size: 48px;
+    font-weight: bold;
+    color: #ff6f31;
+    text-shadow: 2px 2px 8px rgba(255, 111, 49, 0.8);
+    z-index: 9999; /* مطمئن باش بالاتر از بقیه است */
+    cursor: default;
+    user-select: none;
+  }
+  
+  
+  /* عکس موبایل سمت چپ نوار */
+  .phone-image {
+    width: 400px;
+    position: relative;
+    top: -40px;
+    z-index: 10;
+    transition: transform 0.3s ease;
+  }
+  
+  /* متن داخل نوار */
+  .content {
+    max-width: 600px;
+    z-index: 1;
+    margin-top: -23px;
+  }
+  
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ff6f31;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px rgba(255, 111, 49, 0.5);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    cursor: default;
+    user-select: none;
+  }
+  
+
+  
+  .buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .desc {
+    font-size: 20px;
+    color: #222;
+    line-height: 1.8;
+    margin-bottom: 10px;
+  }
+  
+  .matnman {
+    font-size: 20px;
+    font-weight: 500;
+    color: #cc531b;
+    text-shadow: 1px 1px 4px rgba(234, 137, 95, 0.351);
+  }
+  
+  .buttons {
+    margin-top: 40px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .download-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, #ffe29f, #ffa99f);
+    color: #333;
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    -ms-border-radius: 999px;
+    -o-border-radius: 999px;
+  }
+  
+  .download-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ff7b54;
+  }
+  
+  .download-btn.myket {
+    background: linear-gradient(135deg, #b4f8c8, #a0e7e5);
+    color: #003f3f;
+  }
+  
+  .download-btn.myket:hover {
+    background: linear-gradient(135deg, #57c6a1, #7bdff2);
+    border-color: #00a896;
+    color: white;
+  }
+  
+  .download-btn.bazar {
+    background: linear-gradient(135deg, #f7cf96, #e3a047);
+    color: #5f2c2c;
+  }
+  
+  .download-btn.bazar:hover {
+    background: linear-gradient(135deg, #f28482, #f6bd60);
+    border-color: #e76f51;
+    color: white;
+  }

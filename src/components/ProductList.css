@@ -1,0 +1,596 @@
+.card-title {
+  font-size: 1.2rem;
+}
+
+.btn-warning {
+  border-radius: 20px;
+}
+
+img {
+  border-radius: 12px;
+}
+
+.slider-row {
+  transition: transform 1s ease-in-out;
+}
+
+/* دکمه‌های اسلایدر با استایل cute-orange */
+
+.slider-btn {
+  background: linear-gradient(135deg, #ffd580, #ffa500);
+  color: #fff;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 999px; /* کاملاً کپسولی */
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 14px rgba(255, 165, 0, 0.4);
+  transition: all 0.3s ease;
+  margin: 0 8px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.slider-btn:hover {
+  background: linear-gradient(135deg, #ffa500, #ff8c00);
+  transform: scale(1.07);
+  box-shadow: 0 8px 18px rgba(255, 140, 0, 0.5);
+}
+
+.slider-btn:active {
+  transform: scale(0.95);
+
+}
+
+/* دکمه افزودن به سبد خرید */
+.btn.cute-orange-btn {
+  border-radius: 999px; /* این باعث میشه دکمه کپسولی بشه */
+  background: linear-gradient(135deg, #ffb347, #ffcc33);
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(255, 180, 0, 0.4);
+}
+
+.cute-orange-btn:hover {
+  background: linear-gradient(135deg, #ff9900, #ff6600);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 102, 0, 0.5);
+}
+
+.cute-orange-btn:active {
+  transform: scale(0.97);
+}
+
+/* کارت ثابت */
+
+.card.text-center.h-100.shadow {
+  border-radius: 20px;
+  padding: 24px 16px;
+  background: linear-gradient(135deg, #fffaf0, #ffe4b5);
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.2);
+  transition: all 0.4s ease-in-out;
+}
+
+.card.text-center.h-100.shadow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(255, 165, 0, 0.3);
+}
+
+.card.text-center.h-100.shadow img {
+  margin-top: 8px;
+  margin-bottom: 12px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card.text-center.h-100.shadow .btn {
+  margin-top: 6px;
+}
+
+.card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 1rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+}
+
+.card-icons span {
+  background-color: #fff;
+  color: #ff6f00;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card-icons span:hover {
+  transform: scale(1.2);
+  background-color: #ffe0b2;
+}
+
+.card-img-wrapper:hover .card-icons {
+  opacity: 1;
+}
+
+
+.brand-bar {
+  background: linear-gradient(90deg, #fff8e1, #ffe0b2);
+  border-radius: 20px;
+  border: 2px dashed #ffa726;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  margin-top: 3rem;
+}
+
+.brand-info {
+  max-width: 300px;
+  margin-left: 2rem;
+}
+
+.brand-info h5 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ef6c00;
+  margin-bottom: 0.5rem;
+}
+
+.brand-info p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.brand-info span {
+  font-size: 2rem;
+  color: #fb8c00;
+  animation: bounceArrow 1s infinite alternate;
+}
+
+@keyframes bounceArrow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-7px);
+  }
+}
+
+.brand-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-logo {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(30%);
+  transition: transform 0.4s ease, filter 0.3s ease;
+  border-radius: 12px;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.brand-logo:hover {
+  transform: scale(1.15);
+  filter: grayscale(0%);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.brand-cloud {
+  background: radial-gradient(circle at top right, #fff3e0, #ffe0b2);
+  /* border: 2px dotted #ffa726; */ /* حذف خط دور */
+  border-radius: 50px;
+  padding: 3rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 0 12px 30px rgba(255, 152, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ابرک اصلی */
+.brand-cloud::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 150px;
+  height: 150px;
+  background: #fff8e1;
+  border-radius: 50%;
+  box-shadow: 60px 60px 0 #fff3e0;
+  z-index: 0;
+}
+
+/* ابرک اضافی 1 */
+.brand-cloud::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 130px;
+  height: 130px;
+  background: #fff8e1;
+  border-radius: 50%;
+  box-shadow: -50px -50px 0 #fff3e0;
+  z-index: 0;
+}
+
+/* ابرک اضافی 2 */
+.brand-cloud .extra-cloud {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  background: #fff8e1;
+  border-radius: 50%;
+  box-shadow: 40px -40px 0 #fff3e0;
+  z-index: 0;
+}
+
+.brand-cloud .brand-info {
+  z-index: 2;
+  max-width: 300px;
+  margin-left: 2rem;
+}
+
+.brand-cloud .brand-info h5 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ef6c00;
+}
+
+.brand-cloud .brand-info p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+.brand-cloud .brand-info span {
+  font-size: 2rem;
+  color: #fb8c00;
+  animation: bounceArrow 1s infinite alternate;
+}
+.brand-logo-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.brand-logos-spin {
+  display: flex;
+  gap: 3rem;
+  animation: moveTrain 15s linear infinite alternate;
+  padding: 2rem 0;
+}
+
+
+.brand-logo {
+  height: 120px; /* افزایش اندازه */
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  border-radius: 25px;
+  background: white;
+  padding: 20px; /* افزایش padding */
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  filter: grayscale(20%);
+}
+
+.brand-logo:hover {
+  transform: scale(1.25) rotate(5deg);
+  filter: grayscale(0%);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.3);
+}
+
+
+
+@keyframes moveTrain {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-30%);
+
+}
+}
+
+
+
+.contact-card {
+  background-color: #e9fce9;
+  /*سبزپسته‌ای خیلی لطیف*/border: 1px solid #40bd40;
+  /*سبزروشن‌تربرایحاشیه*/border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(150, 200, 150, 0.2);
+  /*حالهسبزملایم*/padding: 16px 20px;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.contact-card strong {
+  color: #2faa35; /* سبز پررنگ برای متن‌های اصلی */
+  font-weight: bold;
+}
+.contact-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(150, 200, 150, 0.3);
+}
+
+
+.text-orange {
+  color: #ff9f1a !important;
+}
+
+.orange-title {
+  color: #ff9f1a !important;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  text-shadow:
+    0 2px 4px rgba(255, 159, 26, 0.6),
+    0 0 10px rgba(255, 159, 26, 0.3),
+    0 0 20px rgba(255, 159, 26, 0.2);
+}
+
+
+.form-control {
+  border-radius: 20px !important;
+  border: 1px solid #ff9f1a;
+  background-color: #fffaf3;
+  box-shadow: 0 3px 8px rgba(255, 159, 26, 0.1);
+  transition: all 0.3s ease-in-out;
+  padding: 10px 15px;
+  font-size: 0.95rem;
+}
+
+.form-control:focus {
+  border-color: #e68cbf !important;
+  background-color: #fff0f5 !important;
+  box-shadow: 0 0 10px rgba(230, 140, 191, 0.6) !important;
+  outline: none !important;
+}
+
+.short-cute-btn {
+  background-color: #ff9f1a;
+  /*نارنجیناز*/color: rgb(217, 132, 86);
+  border: none;
+  padding: 6px 18px;
+  font-size: 0.9rem;
+  border-radius: 300px !important;
+  /*کپسولیناناز*/transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(255, 159, 26, 0.4);
+
+}
+
+.short-cute-btn:hover,
+.short-cute-btn:focus {
+  background-color: #e68300; /* نارنجی تندتر */
+  box-shadow: 0 6px 14px rgba(230, 131, 0, 0.6);
+  transform: scale(1.05);
+}
+
+.short-cute-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 8px rgba(230, 131, 0, 0.6);
+}
+
+
+@keyframes floatForm {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+@keyframes pulseGlow {
+  0% {
+    box-shadow:
+      0 0 20px rgba(255, 152, 0, 0.4),
+      0 0 60px rgba(255, 152, 0, 0.2),
+      0 0 120px rgba(255, 87, 34, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 30px rgba(255, 171, 64, 0.6),
+      0 0 90px rgba(255, 171, 64, 0.4),
+      0 0 150px rgba(255, 111, 0, 0.3);
+  }
+  100% {
+    box-shadow:
+      0 0 20px rgba(255, 152, 0, 0.4),
+      0 0 60px rgba(255, 152, 0, 0.2),
+      0 0 120px rgba(255, 87, 34, 0.2);
+  }
+}
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+.card {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.07);
+  cursor: pointer;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.pet-glow-wrapper {
+  animation: heartbeat 1.5s infinite ease-in-out;
+}
+
+.product-tabs-wrapper {
+  background-color: #fff7ec; /* یه حالت نارنجی خیلی روشن و لطیف */
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 6px 18px rgba(255, 159, 26, 0.1); /* سایه ملایم */
+}
+
+.product-tabs {
+  border-radius: 25px;
+  background-color: #fffaf3;
+  box-shadow: 0 4px 12px rgba(255, 159, 26, 0.15);
+  overflow: hidden;
+}
+
+
+.first-tab {
+  font-weight: 700;
+  color: #ff6b00;
+  text-shadow: 0 0 5px #ff9f1a;
+  border-bottom: 3px solid #ff6b00;
+  background-color: #fff1e0;
+  padding: 8px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.middle-tabs {
+  flex-grow: 1;
+  overflow-x: auto;
+  scrollbar-width: none; /* برای فایرفاکس */
+  -ms-overflow-style: none; /* برای IE و Edge */
+}
+
+.middle-tabs::-webkit-scrollbar {
+  display: none; /* برای کروم و سافاری */
+}
+
+
+.middle-tabs .tab-item {
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #666;
+  white-space: nowrap;
+}
+
+.middle-tabs .tab-item:hover {
+  color: #ff8c00;
+  background-color: #fff1e0;
+}
+.slider-buttons .small-btn {
+  background-color: #ff9f1a;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  border: none;
+  padding: 6px 20px;
+  border-radius: 300px !important;
+  box-shadow: 0 4px 10px rgba(255, 159, 26, 0.4);
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+}
+
+.slider-buttons .small-btn:hover,
+.slider-buttons .small-btn:focus {
+  background-color: #e68300;
+  box-shadow: 0 6px 14px rgba(230, 131, 0, 0.6);
+  transform: scale(1.05);
+}
+
+.slider-buttons .small-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 8px rgba(230, 131, 0, 0.6);
+}
+
+
+/* رسپانسیو برای موبایل */
+@media (max-width: 768px) {
+  .product-tabs {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .slider-buttons {
+    display: none !important;
+  }
+
+  .middle-tabs {
+    padding-bottom: 4px;
+  }
+}
+.scroll-menu {
+  border-radius: 25px;
+  background-color: #fffaf3;
+  box-shadow: 0 4px 12px rgba(255, 159, 26, 0.15);
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 20px;
+}
+
+.scroll-menu span {
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-menu span:hover {
+  background-color: rgba(255, 159, 26, 0.1);
+}
+
+.scroll-menu::-webkit-scrollbar {
+  display: none;
+}
+
+.product-slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-slider {
+  transition: transform 0.4s ease;
+  scroll-behavior: smooth;
+}
+
+.product-card {
+  width: 250px;
+  height: 180px;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
