@@ -5,19 +5,19 @@ function Navbar() {
   return (
     <>
       {/* 🔝 نوار آیکون شبکه‌های اجتماعی */}
-      <div className="top-bar py-1 border-bottom mt-2">
+      <div className="top-barshare py-1 border-bottom mt-2">
         <div className="container top-icons d-flex justify-content-center align-items-center gap-4">
-          <a href="https://facebook.com" className="text-dark fs-5" target="_blank" rel="noreferrer"><i className="bi bi-facebook"></i></a>
-          <a href="https://instagram.com" className="text-dark fs-5" target="_blank" rel="noreferrer"><i className="bi bi-instagram"></i></a>
-          <a href="https://linkedin.com" className="text-dark fs-5" target="_blank" rel="noreferrer"><i className="bi bi-linkedin"></i></a>
-          <a href="https://t.me" className="text-dark fs-5" target="_blank" rel="noreferrer"><i className="bi bi-telegram"></i></a>
-          <a href="https://twitter.com" className="text-dark fs-5" target="_blank" rel="noreferrer"><i className="bi bi-twitter"></i></a>
+          <a href="https://facebook.com" className=" fs-5" target="_blank" rel="noreferrer"><i className="bi bi-facebook"></i></a>
+          <a href="https://instagram.com" className=" fs-5" target="_blank" rel="noreferrer"><i className="bi bi-instagram"></i></a>
+          <a href="https://linkedin.com" className=" fs-5" target="_blank" rel="noreferrer"><i className="bi bi-linkedin"></i></a>
+          <a href="https://t.me" className=" fs-5" target="_blank" rel="noreferrer"><i className="bi bi-telegram"></i></a>
+          <a href="https://twitter.com" className=" fs-5" target="_blank" rel="noreferrer"><i className="bi bi-twitter"></i></a>
         </div>
       </div>
 
       {/* 🔽 نوبار اصلی */}
-      <nav className="navbar navbar-dark bg-dark px-3">
-        <div className="container d-flex flex-column flex-lg-row align-items-center justify-content-between" dir="rtl">
+      <nav className="my-navbar">
+      <div className="container d-flex flex-column flex-lg-row align-items-center justify-content-between" dir="rtl">
 
           {/* ✅ حالت موبایل */}
           <div className="d-lg-none d-flex justify-content-between align-items-center w-100 mb-2">
@@ -53,19 +53,19 @@ function Navbar() {
 
             {/* 📁 منو میانی */}
             <div className="d-flex gap-4 justify-content-center align-items-center">
-              <a className="nav-link text-white" href="/">خانه</a>
-              <a className="nav-link text-white" href="/">فروشگاه</a>
-              <a className="nav-link text-white" href="/">وبلاگ</a>
-              <a className="nav-link text-white" href="/">تماس باما</a>
-              <a className="nav-link text-white" href="/">درباره ما</a>
+              <a className="nav-link my-nav-link" href="/">خانه</a>
+              <a className="nav-link my-nav-link" href="/">فروشگاه</a>
+              <a className="nav-link my-nav-link" href="/">وبلاگ</a>
+              <a className="nav-link my-nav-link" href="/">تماس باما</a>
+              <a className="nav-link my-nav-link" href="/">درباره ما</a>
             </div>
 
             {/* 🛒 سبد خرید و ثبت نام / ورود چپ */}
-            <div className="d-flex align-items-center gap-3">
-              <a href="/cart" className="text-white text-decoration-none" style={{ fontSize: "1.4rem" }}>
+            <div className="my-icon-link">
+              <a href="/cart" className="my-icon-link" style={{ fontSize: "1.4rem" }}>
                 <i className="bi bi-cart"></i>
               </a>
-              <a href="/login" className="text-white text-decoration-none" style={{ fontSize: "1rem" }}>
+              <a href="/login" className="my-icon-link" style={{ fontSize: "1rem" }}>
                 ثبت‌نام / ورود
               </a>
               <a
@@ -85,7 +85,7 @@ function Navbar() {
 
       {/* 📋 منوی موبایل (Offcanvas) */}
       <div
-        className="offcanvas offcanvas-start text-bg-dark"
+        className="offcanvas offcanvas-start  my-mobile-menu"
         tabIndex="-1"
         id="offcanvasNavbar"
         aria-labelledby="offcanvasNavbarLabel"
@@ -121,7 +121,7 @@ function Navbar() {
       </div>
       {/* 📋 فرم ورود/ثبت‌نام (Offcanvas) */}
 <div
-  className="offcanvas offcanvas-start text-bg-dark"
+  className="offcanvas offcanvas-start orange-auth"
   tabIndex="-1"
   id="offcanvasAuth"
   aria-labelledby="offcanvasAuthLabel"
@@ -136,8 +136,8 @@ function Navbar() {
     ></button>
   </div>
 
-  <div className="offcanvas-body">
-    <form>
+  <div className="offcanvas offcanvas-start orange-auth">
+    <form className="orange-form d-flex flex-column gap-3">
       <div className="mb-3">
         <label htmlFor="username" className="form-label">نام کاربری</label>
         <input type="text" className="form-control" id="username" placeholder="نام کاربری خود را وارد کنید" />

@@ -1,5 +1,5 @@
-.top-bar {
-  background-color: yellow;
+.top-barshare {
+  background:  linear-gradient(90deg, #d7447fad, #de5e19de);
   max-width: 85%;
   margin: 0 auto;
   border-radius: 10px 10px 0 0; /* فقط بالا گرد، پایین صاف */
@@ -7,8 +7,16 @@
 
 
 .top-icons a {
-  color: black; /* آیکون‌ها مشکی باشن که رو زرد دیده شن */
-  font-size: 1.2rem;
+  color: #770808cf; /* آیکون‌ها مشکی باشن که رو زرد دیده شن */
+  font-size: 1.3rem;
+}
+
+.top-icons a:hover {
+  color: #d54710; /* آیکون‌ها مشکی باشن که رو زرد دیده شن */
+  font-size: 1.3rem;
+}
+.bi-telephone-fill {
+  color: rgb(138, 4, 4);
 }
 
 .mobile-cart-icon {
@@ -24,15 +32,270 @@
     padding-right: 3rem;
   }
 }
-.navbar a {
-  transition: 0.3s;
+.my-navbar {
+  background: radial-gradient(#c30863ad, #9a4804b8);
+  padding: 15px 25px;
+  border-radius: 25px;
+  /*گوشه‌هایگرد*/width: 90%;
+  /*یامثلاً80%،یعنینوارازکناره‌هافاصلهداره*/margin: 0px auto;
+  /*برایوسط‌چینشدنوفاصلهازبالاوپایین*/box-shadow: 0 4px 20px rgb(120, 56, 4);
 }
 
-.navbar a:hover {
-  color: #ffc107; /* زردِ خوشگل موقع هاور */
+.my-nav-link {
+  position: relative;
+  color: #34022f !important;
+  font-size: 1.2rem !important;
+  font-weight: bold;
+  transition: 0.3s ease;
+  text-decoration: none; /* حذف آندرلاین پیش‌فرض */
+  padding-bottom: 5px;
 }
+.my-nav-link:hover {
+  color: #ede7eb !important; /* رنگ دلخواه موقع هاور */
+}
+.my-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /*شروعازراست*/width: 0;
+  height: 2px;
+  background-color: #ede7eb;
+  transition: width 0.8s ease;
+  -webkit-transition: width 0.8s ease;
+  -moz-transition: width 0.8s ease;
+  -ms-transition: width 0.8s ease;
+  -o-transition: width 0.8s ease;
+}
+
+.my-nav-link:hover::after {
+  width: 100%; /* تا چپ ادامه پیدا کنه */
+}
+
 
 .navbar-wrapper {
   padding-left: 5rem;
   padding-right: 5rem;
+}
+
+.my-icon-link {
+  color: #34022f;
+  text-decoration: none;
+  font-size: 1.rem !important;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.my-icon-link:hover {
+  color: #eadfc5;
+  /*رنگدلخواهموقعهاور*/transform: scale(1.3) !important;
+   /* یه کوچولو بزرگ شه */
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.my-icon-link i {
+  color: #f4dac5;
+  transition: color 0.3s ease;
+}
+
+.my-icon-link:hover i {
+  color: #842004; /* رنگ خاص موقع هاور برای آیکون سبد */
+}
+
+.my-toggler {
+  background-color: #c30863ad;
+  /*رنگدلخواهبک‌گراند*/border-radius: 100%;
+  border: none;
+  padding: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  -webkit-border-radius: 45%;
+  -moz-border-radius: 45%;
+  -ms-border-radius: 45%;
+  -o-border-radius: 45%;
+}
+
+.my-toggler:hover {
+  background-color: #9a4804de; /* رنگ موقع هاور */
+  transform: scale(1.1); /* افکت هاور */
+}
+
+/* تغییر رنگ خود آیکون همبرگر */
+.my-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* 🎨 پس‌زمینه کلی Offcanvas */
+.orange-auth, .text-bg-dark.orange-auth {
+  background: linear-gradient(135deg, #8e642a, #ffcc70); /* تم پرتقالی روشن */
+  color: #4b2c20;
+  border-radius: 0 20px 20px 0;
+}
+/* 📱 استایل منوی موبایل با ترکیب رنگ‌های طوسی، پرتغالی، گلبهی */
+.my-mobile-menu {
+  background: linear-gradient(135deg, #fdf2ec, #fbe0db, #ffe2c9);
+  color: #4a4a4a;
+  padding: 1.5rem;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 0 20px rgba(255, 174, 139, 0.4);
+  transition: all 0.5s ease-in-out;
+}
+
+.my-mobile-menu .offcanvas-header {
+  border-bottom: 2px solid #ffb38e;
+}
+
+.my-mobile-menu .offcanvas-title {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #ff7e5f;
+}
+
+.my-mobile-menu .btn-close-white {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+.my-mobile-menu .btn-close-white:hover {
+  transform: rotate(90deg);
+  background-color: #ffb38e;
+}
+
+.my-mobile-menu .form-control {
+  border-radius: 20px;
+  border: 2px solid #ffb38e;
+  background-color: #fff;
+  color: #333;
+}
+
+.my-mobile-menu .btn-outline-light {
+  border: 2px solid #ff7e5f;
+  color: #ff7e5f;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.my-mobile-menu .btn-outline-light:hover {
+  background-color: #ff7e5f;
+  color: white;
+}
+
+.my-mobile-menu .nav-link {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+  color: #ff7e5f !important;
+}
+.my-mobile-menu .nav-link:hover {
+  background-color: #ffe2c9;
+  color: #333 !important;
+}
+
+
+/* 🔻 هدر Offcanvas */
+.orange-auth .offcanvas-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 🔸 عنوان */
+.orange-auth .offcanvas-title {
+  font-weight: bold;
+  color: #722709;
+}
+
+/* ❌ دکمه بستن */
+.orange-auth .btn-close {
+  filter: invert(1);
+  opacity: 0.9;
+}
+
+/* 📝 لیبل‌ها */
+.orange-auth .form-label {
+  color: #6b2408;
+  font-weight: bold;
+}
+
+/* 🔲 اینپوت‌ها */
+.orange-auth .form-control {
+  background: #fff;
+  border: 1px solid #ffb347;
+  border-radius: 10px;
+  color: #333;
+  transition: 0.3s ease;
+}
+
+.orange-auth .form-control:focus {
+  box-shadow: 0 0 0 3px rgba(255, 166, 0, 0.868);
+  border-color: #ffa500;
+}
+
+/* 🔒 دکمه چشم */
+.orange-auth .input-group .btn {
+  border-radius: 50px;
+  border-color: #ffc05f;
+  background-color: #fff7ed;
+  color: #ff8800;
+  transition: 0.3s ease;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.orange-auth .input-group .btn:hover {
+  background-color: #ffe4c4;
+  color: #e69500;
+}
+
+/* 🔘 چک‌باکس */
+.orange-auth .form-check-input:checked {
+  background-color: #ffa500;
+  border-color: #ffa500;
+}
+
+/* 🧡 دکمه ورود / ثبت‌نام */
+.orange-auth .btn-light,
+.orange-auth .btn-primary {
+  background-color: #e1a3b87b;
+  color: #683207;
+  font-weight: bold;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.6rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.orange-auth .btn-light:hover,
+.orange-auth .btn-primary:hover {
+  background-color: #e69500;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+}
+
+/* 🔗 لینک‌ها */
+.orange-auth a {
+  color: #994d00;
+  text-decoration: none;
+}
+
+.orange-auth a:hover {
+  color: #cc6600;
+  text-decoration: underline;
+}
+/* 🔗 لینک "رمز عبور را فراموش کرده‌اید؟" و "ایجاد حساب کاربری" */
+.orange-auth a,
+.orange-auth .forgot-password-link {
+  color: #f6f2ee;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.orange-auth a:hover,
+.orange-auth .forgot-password-link:hover {
+  color: #87230a;
+  text-decoration: underline;
 }

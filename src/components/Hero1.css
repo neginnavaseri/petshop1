@@ -1,3 +1,62 @@
+.pet-image-wrapper {
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 2 / 1; /* کپسولی افقی */
+  overflow: hidden;
+  border-radius: 100px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 6px;
+  background: linear-gradient(to right, #ff7e5f, #e68aad, #ccc);
+}
+
+.pet-image-wrapper img {
+  width: 200% !important;
+  height: 100% !important;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+/* انیمیشن تپش قلب */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.05);
+  }
+  40% {
+    transform: scale(0.98);
+  }
+  60% {
+    transform: scale(1.04);
+  }
+  80% {
+    transform: scale(0.99);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heart-beat {
+  animation: heartbeat 1.8s infinite ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* حاشیه رنگی پرتغالی-گلبهی-طوسی */
+
+.rainbow-border {
+  border: 6px solid transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(135deg, #ff7e5f, #e68aad, #aaa);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 5px;
+}
+
+
+
 /* کانتینر دکمه */
 .hero1-btn-container {
     transition: all 0.3s ease;
