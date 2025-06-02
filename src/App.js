@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Categories from "./components/Categories";
 import ProductList from "./components/ProductList";
-import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -12,7 +11,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import HeroRotator from "./components/HeroRotator";
 import ProductSlider from './components/ProductSlider';
 import WatermelonBanner from "./components/WatermelonBanner";
-
+import BlogSlider from "./components/BlogSlider";
 
 
 function App() {
@@ -25,7 +24,8 @@ function App() {
       <ProductList />
       <ProductSlider />
       <WatermelonBanner />
-      <Testimonials />
+      <BlogSlider/>
+     
       <Footer />
       
     </div>

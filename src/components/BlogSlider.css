@@ -1,0 +1,403 @@
+/* کل کانتینر */
+.weblog-slider {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+  font-family: "Vazir", Tahoma, sans-serif;
+  direction: rtl;
+  color: #4a2e00; /* قهوه‌ای تیره، برای کنتراست با پرتقالی */
+}
+
+/* عنوان */
+.weblog-header {
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ff6f61;
+  font-weight: 900;
+  text-shadow: 2px 2px 5px rgba(255, 183, 149, 0.85),
+               -1px -1px 3px rgba(255, 105, 97, 0.6);
+  letter-spacing: 1.4px;
+  position: relative;
+  animation: pulseHeader 3.5s ease-in-out infinite;
+  transition: all 0.3s ease-in-out;
+  transform-origin: center;
+}
+
+@keyframes pulseHeader {
+  0% {
+    transform: scale(1) rotate(0deg);
+    text-shadow: 2px 2px 5px rgba(255, 183, 149, 0.8),
+                 -1px -1px 3px rgba(255, 105, 97, 0.6);
+  }
+  25% {
+    transform: scale(1.08) rotate(-0.8deg);
+    text-shadow: 3px 3px 8px rgba(255, 138, 101, 0.85);
+  }
+  50% {
+    transform: scale(1.12) rotate(0.6deg);
+    text-shadow: 4px 4px 10px rgba(255, 112, 67, 0.9);
+  }
+  75% {
+    transform: scale(1.08) rotate(-0.6deg);
+    text-shadow: 3px 3px 8px rgba(255, 138, 101, 0.85);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    text-shadow: 2px 2px 5px rgba(255, 183, 149, 0.8),
+                 -1px -1px 3px rgba(255, 105, 97, 0.6);
+  }
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.blog-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease;
+}
+
+.image-wrapper:hover .blog-image {
+  filter: brightness(50%);
+}
+
+.dots-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.image-wrapper:hover .dots-overlay {
+  opacity: 1;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  animation: bounce 1.5s ease-in-out infinite;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* دکمه‌ها */
+.prev-btn,
+.next-btn {
+  background: linear-gradient(135deg, #ff6f61, #ffab91);
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 9px 22px;
+  margin: 0 8px;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(255, 111, 97, 0.7);
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.prev-btn:hover:not(:disabled),
+.next-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #e0452a, #ebe8e7);
+  transform: scale(1.1);
+}
+
+
+.weblog-container {
+  padding: 40px 12px; /* فاصله بالا و پایین بیشتر که جا باشه کارت‌ها نفس بکشند */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  overflow: visible; /* اجازه بده کارت‌های بزرگ شده بیرون از محدوده والد دیده بشن */
+}
+
+
+
+
+/* کانتینر کارت‌ها */
+.weblog-cards-wrapper {
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+.weblog-cards {
+  display: flex;
+  gap: 22px; /* فاصله بین کارت‌ها */
+  justify-content: center;
+  padding: 12px 6px; /* فاصله داخلی کارت‌ها */
+  flex-wrap: nowrap;
+}
+
+
+/* کل کانتینر */
+.weblog-slider {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+  font-family: "Vazir", Tahoma, sans-serif;
+  direction: rtl;
+  color: #fdfcf8; /* قهوه‌ای تیره، برای کنتراست با پرتقالی */
+}
+
+/* عنوان */
+.weblog-header {
+  font-size: 3.4rem;
+ 
+  text-align: center;
+  margin-bottom: -30px;
+  color: #ff6600;
+  /*پرتقالی*/text-shadow: 1px 1px 3px #fab587;
+
+}
+
+/* دکمه‌ها */
+.prev-btn,
+.next-btn {
+  background: linear-gradient(45deg, #ff7700, #cc4400);
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 10px 25px;
+  margin: 10px 5px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 102, 0, 0.6);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.prev-btn:disabled,
+.next-btn:disabled {
+  background: #ffa366aa;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.prev-btn:hover:not(:disabled),
+.next-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ff8a75, #ffc4b9);
+  transform: scale(1.1);
+}
+
+
+/* کانتینر کارت‌ها */
+.weblog-cards-wrapper {
+  overflow-x: hidden;
+  padding-bottom: 5px;
+}
+
+
+/* کارت‌ها به صورت افقی و بزرگ‌تر */
+
+
+.weblog-card:hover {
+  transform: translateY(-7px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(227, 130, 65, 0.5);
+}
+
+.weblog-card {
+  background: linear-gradient(145deg, #f5efed, #ec9455);
+  margin: 30px 1px; /* فاصله کارت‌ها از بالا و پایین و چپ و راست */
+  max-width: 30%;
+  padding: 15px 13px 20px 13px;
+  border-radius: 16px;
+  box-shadow: 0 6px 30px rgba(203, 149, 31, 0.337);
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+  cursor: pointer;
+  perspective: 800px;
+  position: relative; /* برای z-index روی حالت hover */
+  z-index: 0;
+}
+.weblog-card:hover {
+  transform: scale(1.15); /* فقط بزرگ شدن بدون جابجایی عمودی */
+  box-shadow: 0 14px 30px rgba(230, 177, 98, 0.6);
+  z-index: 10; /* جلوتر بودن کارت در حالت hover */
+}
+/* عکس کارت */
+.blog-image {
+  width: 100%;
+  height: 230px; /* بلندتر */
+  border-radius: 14px;
+  object-fit: cover;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(255, 111, 97, 0.4);
+  transition: transform 0.4s ease;
+}
+/* اگر خواستی عکس هم روی هاور کمی بزنه بیرون */
+.weblog-card:hover .blog-image {
+  transform: scale(1.05);
+}
+/* عنوان کارت */
+.blog-title {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #603e33;
+  margin-bottom: 8px;
+  text-align: center;
+  user-select: none;
+  letter-spacing: 0.03em;
+}
+/* بخش نویسنده و کامنت */
+.blog-author {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  align-items: center;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 9px;
+}
+
+.author-icon,
+.comment-icon {
+  color: #c17368;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.comment-icon {
+  cursor: pointer;
+}
+
+.comment-icon:hover {
+  color: #ff7043;
+}
+/* اشتراک گذاری */
+
+.blog-share {
+    position: relative;
+    color: #b28e88;
+    font-size: 19px;
+    margin-bottom: 11px;
+    cursor: pointer;
+  }
+.blog-share i {
+  font-size: 16px;
+  color: #9d0f0fda;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.blog-share i:hover {
+  color: #444;
+  transform: rotate(20deg) scale(1.2);
+}
+
+.blog-share {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+  cursor: pointer;
+}
+.blog-share-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.social-icons {
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  transform: translateX(50%);
+  background: #ffffffdd;
+  border-radius: 22px;
+  padding: 6px 14px;
+  display: flex;
+  gap: 14px;
+  box-shadow: 0 4px 12px rgba(255, 111, 97, 0.5);
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.blog-share:hover .social-icons {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.social-icons a {
+  color: #c95c48;
+  font-size: 19px;
+  transition: color 0.25s ease;
+}
+
+.social-icons a:hover {
+  color: #ff7043;
+}
+.social-icons i {
+  font-size: 1.2rem;
+  color: #dc861d;
+  transition: transform 0.2s ease;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);
+  color: #f84610;
+}
+
+/* رنگ مخصوص هر شبکه (اختیاری) */
+.social-icons a:nth-child(1):hover { color: #E4405F; } /* Instagram */
+.social-icons a:nth-child(2):hover { color: #1DA1F2; } /* Twitter */
+.social-icons a:nth-child(3):hover { color: #0088cc; } /* Telegram */
+.social-icons a:nth-child(4):hover { color: #1877f2; } /* Facebook */
+
+/* متن ادامه مطلب */
+/* ادامه مطلب */
+.read-more {
+  font-weight: 700;
+  font-size: 20px;
+  color: #fffcfc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  user-select: none;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  font-weight: 800;
+  font-size: 16px;
+  color: #ff7043;
+  text-shadow: 0 0 6px #ffab91aa;
+}

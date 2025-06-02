@@ -1,0 +1,227 @@
+.custom-footer {
+    position: relative;
+    background: linear-gradient(45deg, #24c295, #d84315);
+    color: white;
+    padding: 80px 20px;
+    align-items: flex-start;
+    min-height: 300px;
+    display: flex;
+    justify-content:space-between ;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-card {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(206, 162, 82);
+    color: #070808;
+    border-radius: 20px;
+    padding: 20px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    width: 310px;
+    
+    font-weight: bold;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .footer-title {
+    font-size: 1.8rem;
+    color: #db471a;
+    font-weight: 700;
+    /* margin-bottom: 80px; */
+    margin-top: -5px;
+  }
+  .footer-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: center;
+    color: #312f2f;
+  }
+  .footer-text {
+    margin-top: 90px;
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+  .footer-left {
+    align-items: flex-end;
+    position: absolute;
+    left: 120px;
+    bottom: 20px;
+    
+  
+  }
+  .footer-info-card {
+    background-color: rgba(255, 255, 255, 0.078);
+    padding: 18px 30px;
+    border-radius: 80px;
+    text-align: right;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(233, 223, 223, 0.173);
+    display: flex;
+    align-items: center;
+    gap: 15px; /* فاصله بین آیکون و متن */
+    padding-left: 30px; /* یه کم فاصله از چپ برای آیکون */
+}
+.footer-info-card i.icon {
+  font-size: 1.5rem;
+  color: #dd5d19bb; /* رنگ زرد طلایی دلبر برای آیکون */
+  flex-shrink: 0; /* آیکون ثابت بمونه */
+}
+.footer-info-card h4 {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.footer-info-card p {
+  margin: 3px 0;
+  font-size: 0.95rem;
+  color: #f4c8c4;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.footer-socials a {
+  color: rgba(187, 16, 16, 0.638);
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+  transform: scale(1.2);
+  color: #ffe0b2;
+}
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+}
+}
+
+.footer-info-card {
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: right;
+  color: white;
+
+}
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+  padding-bottom: 2px;
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ffd54f;
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffeb3b;
+  transform: translateX(-4px);
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+
+.footer-links-title {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #fff3e0;
+}
+
+.footer-link-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+.footer-link-list li {
+  margin-bottom: 8px;
+}
+
+.footer-link-list li a {
+  text-decoration: none;
+  color: #ffe0b2;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.footer-link-list li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transform: translateX(-5px);
+}
+.footer-left,
+.footer-links {
+  margin-top: -30px; /* کارت‌ها و لینک‌ها رو میاره بالا */
+}
+.custom-footer {
+  position: relative;
+  padding-bottom: 60px; /* جا برای نوار پایین */
+}
+
+.footer-bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #23864cad, #e2794162);
+  color: #fff3e0;
+  text-align: center;
+  padding: 1px 0;
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.15);
+}
+
