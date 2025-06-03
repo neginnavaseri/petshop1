@@ -1,25 +1,30 @@
 .watermelon-banner {
-    position: relative;
-    background-color: #a8e6a1;
-    background-image:
-      radial-gradient(circle at 25% 20%, rgba(255, 166, 0, 0.159) 100px, transparent 140px),
-      radial-gradient(circle at 25% 20%, rgba(255, 166, 0, 0.159) 100px, transparent 140px),
-      radial-gradient(circle at 60% 50%, rgba(255, 166, 0, 0.248) 120px, transparent 160px),
-      radial-gradient(circle at 80% 80%, rgba(255, 166, 0, 0.282) 90px, transparent 130px);
-      
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 20px;
-    padding: 45px 20px 30px !important; /* کوچیک‌تر شد */
-    margin: 40px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    overflow: hidden;
-    min-height: 200px !important;
-  }
-  
+  position: relative;
+  background-color: #a8e6a1;
+  background-image: 
+    radial-gradient(circle at 25% 20%, rgba(255, 166, 0, 0.159) 100px, transparent 140px),
+    radial-gradient(circle at 25% 20%, rgba(255, 166, 0, 0.159) 100px, transparent 140px),
+    radial-gradient(circle at 60% 50%, rgba(255, 166, 0, 0.248) 120px, transparent 160px),
+    radial-gradient(circle at 80% 80%, rgba(255, 166, 0, 0.282) 90px, transparent 130px);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border-radius: 60px;
+  padding: 45px 20px 30px !important;
+
+  margin: 40px auto; /* وسط‌چین و فاصله بالا/پایین */
+  max-width: 1000px; /* یا هر عرضی که بخوای مثلاً 900px یا 800px */
+  width: 100%; /* تا روی موبایل 100٪ بشینه */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+
+  overflow: hidden;
+  min-height: 200px !important;
+}
+
   .top-text {
     position:absolute;
     top: -130px; /* بالاتر از نوار */
@@ -37,9 +42,10 @@
   
   /* عکس موبایل سمت چپ نوار */
   .phone-image {
-    width: 400px;
+    width: 320px;
     position: relative;
-    top: -40px;
+    top: 40px;
+    left: 10px;
     z-index: 10;
     transition: transform 0.3s ease;
   }
@@ -70,7 +76,7 @@
   }
   
   .desc {
-    font-size: 20px;
+    font-size: 1.09rem;
     color: #222;
     line-height: 1.8;
     margin-bottom: 10px;
@@ -134,3 +140,35 @@
     border-color: #e76f51;
     color: white;
   }
+
+  @media (max-width: 768px) {
+    .watermelon-banner {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+      padding: 30px 15px !important;
+      border-radius: 30px;
+    }
+  
+    .phone-card {
+      position: relative;
+      left: auto;
+      top: auto;
+      margin-bottom: 20px;
+      width: 150px;
+    }
+  
+    .content {
+      width: 100%;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .download-btn {
+      width: 100%;
+    }
+  }
+  

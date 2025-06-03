@@ -25,16 +25,25 @@ export default function WhyUsSection() {
     <section
       className="why-us-section text-center text-white"
       style={{
-        backgroundImage: 'url(/images/B.jpg)',
+
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         padding: '80px 0',
       }}
     >
       <Container>
-      <h2 className="section-title mb-5 fw-bold" style={{ color: 'black' }}>
+      <h2
+  className="section-title mb-5 fw-bold"
+  style={{
+    color: "#006400",          // سبز پررنگ (DarkGreen)
+    fontSize: "2.5rem",        // کمی بزرگ‌تر
+    fontWeight: "900",         // بولدتر از معمول
+    letterSpacing: "0.5px",    // یه ذره فاصله بین حروف، برای زیبایی بیشتر
+  }}
+>
   چرا از وودمارت خرید کنیم؟
-           </h2>
+</h2>
+
 
         <Row className="justify-content-center gy-4">
           {features.map((item, idx) => (

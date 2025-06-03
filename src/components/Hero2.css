@@ -1,36 +1,141 @@
-/* دکمه‌ی گوشه بالا در دسکتاپ */
-.hero-btn-container {
+
+.hero2-wrapper h1 {
+  color: #ff6f61; /* نارنجی گرم */
+}
+
+.hero2-wrapper p {
+  color: #5e5e5e; /* طوسی ملایم */
+  font-size: 1.05rem;
+  line-height: 2;
+  text-align: justify;
+}
+
+.hero2-wrapper .btn-primary {
+  background-color: #ff6f61;
+  border-color: #ff6f61;
+  color: #fff;
   transition: all 0.3s ease;
 }
 
-/* تنظیم دکمه */
+.hero2-wrapper .btn-primary:hover {
+  background-color: #f55849;
+  border-color: #f55849;
+}
+
+.hero2-wrapper img {
+  border-color: #ff6f61;
+  transition: all 0.3s ease;
+}
+
+.hero2-wrapper img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(255, 111, 97, 0.4);
+}
+
 .hero-btn {
-  font-weight: bold;
+  background-color: #ffb6b9 !important; /* گلبهی ملایم */
+  color: #fff;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
 }
 
-/* ریسپانسیو برای موبایل (عرض کمتر از 992px یعنی کمتر از lg) */
-@media (max-width: 991.98px) {
-  /* موقعیت دکمه رو absolute به static تغییر بده */
+.hero-btn:hover {
+  background-color: #ffa3a8 !important;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 160, 160, 0.5);
+}
+
+.btn-wm {
+  background: linear-gradient(135deg, #ff9f80, #ff6f61);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(255, 111, 97, 0.3);
+}
+
+.btn-wm:hover {
+  background: linear-gradient(135deg, #ff6f61, #ff3d3d);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 85, 85, 0.4);
+}
+/* دکمه شناور عکس */
+.btn-floating-avatar {
+  width: 75px;
+  height: 75px;
+  padding: 0;
+  background-color: #ffd1d1;
+  border: none;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.btn-floating-avatar:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
+}
+
+/* برای دکمه کپسولی عکس‌دار */
+.hero-btn-container {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+}
+
+/* حالت موبایلی (زیر 768px) */
+@media (max-width: 767.98px) {
   .hero-btn-container {
     position: static !important;
-    margin: 1rem auto 2rem auto !important; /* بالا پایین و وسط‌چین */
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
-    z-index: auto;
+    z-index: 20; /* در صورت نیاز */
   }
+}
+.hero3-img-wrapper {
+  border-radius: 150px !important;
+  padding: 0px;
+  /*برایضخامتبردر*/background: linear-gradient(135deg, #c0c0c0, #ff6f61, #ffb6b9);
+  box-shadow: 0 0 30px rgba(255, 111, 97, 0.25);
 
-  /* دکمه کوچکتر و باریک‌تر */
-  .hero-btn {
-    font-weight: bold;
-    padding: 0.375rem 1rem !important; /* کمتر از px-4 py-2 */
-    max-width: 140px;
-    gap: 0.5rem !important;
+}
+
+.hero3-img {
+  height: 520px;
+  width: 370px;
+  object-fit: cover;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  -ms-border-radius: 150px;
+  -o-border-radius: 150px;
+}
+
+
+/* افکت تپش قلب */
+.heart-beat {
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
   }
-
-  /* عکس داخل دکمه کوچکتر */
-  .hero-btn img {
-    height: 30px !important;
-    width: 30px !important;
+  50% {
+    transform: scale(1.05);
+  }
+  40% {
+    transform: scale(0.98);
+  }
+  /* 60% {
+    transform: scale(1.04);
+  }
+  80% {
+    transform: scale(0.99);
+  } */
+  100% {
+    transform: scale(1);
   }
 }

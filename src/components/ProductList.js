@@ -1,10 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import './ProductList.css';
 
-
-
-
-
 const products = [
   { id: 1, name: "غذای خشک گربه نوع یک", price: "400.000 تومان", images: "/images/cat1.jpg" },
   { id: 2, name: "غذای خشک گربه نوع دو", price: "400.000 تومان", images: "/images/cat2.jpg" },

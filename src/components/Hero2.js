@@ -1,5 +1,5 @@
 import React from "react";
-import "./Hero2.css"; // حتما این فایل CSS رو بساز و کد زیر رو داخلش قرار بده
+import "./Hero2.css"; 
 
 function Hero2() {
   return (
@@ -17,15 +17,27 @@ function Hero2() {
               <button className="btn btn-primary rounded-pill px-4 py-2">همکاری با وودمارت</button>
             </div>
           </div>
-
-          {/* عکس سمت چپ */}
+          {/* عکس سمت چپ با استایل کپسولی و انیمیشن تپش */}
           <div className="col-lg-6 text-center">
-            <img
-              src="/images/hero3.jpg"
-              alt="Pet Shop Banner"
-              className="img-fluid border border-4 border-primary rounded-pill shadow"
-              style={{ height: "450px", width: "320px", objectFit: "cover" }}
-            />
+<div className="d-inline-block heart-beat rainbow-border shadow" style={{
+    borderRadius: "180px",
+    overflow: "hidden",
+    height: "500px",
+    width: "400px",
+  }}>
+  <img
+    src="/images/hero3.jpg"
+    alt="Pet Shop Banner"
+    className="img-fluid "
+    style={{
+      height: "100%",
+      width: "100%",
+      objectFit: "cover",
+    }}
+  />
+  </div>
+
+
                   {/* کپسول کوچولو گوشه راست بالا */}
       <div className="hero-btn-container position-absolute top-0 end-0 m-4" style={{ zIndex: 10 }}>
         <button

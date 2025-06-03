@@ -38,7 +38,7 @@ function Categories() {
               />
               <div className="card-body py-3 px-2">
                 <h6 className="card-title fw-bold mb-2">{cat.name}</h6>
-                <a href="#" className="btn btn-outline-primary btn-sm rounded-pill">
+                <a href="#" className="btn btn-outline btn-sm rounded-pill">
                   {cat.linkText}
                 </a>
               </div>

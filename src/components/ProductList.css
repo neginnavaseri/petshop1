@@ -2,12 +2,15 @@
   font-size: 1.2rem;
 }
 
+
 .btn-warning {
-  border-radius: 20px;
+  border-radius: 35px !important;
+
 }
 
 img {
-  border-radius: 12px;
+  border-radius: 20px !important;
+
 }
 
 .slider-row {
@@ -46,7 +49,7 @@ img {
 .btn.cute-orange-btn {
   border-radius: 999px; /* این باعث میشه دکمه کپسولی بشه */
   background: linear-gradient(135deg, #ffb347, #ffcc33);
-  color: #fff;
+  color: #fff !important;
   font-weight: bold;
   padding: 10px 24px;
   font-size: 0.95rem;
@@ -68,11 +71,15 @@ img {
 /* کارت ثابت */
 
 .card.text-center.h-100.shadow {
-  border-radius: 20px;
+  border-radius: 50px;
   padding: 24px 16px;
   background: linear-gradient(135deg, #fffaf0, #ffe4b5);
   box-shadow: 0 6px 20px rgba(255, 165, 0, 0.2);
   transition: all 0.4s ease-in-out;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }
 
 .card.text-center.h-100.shadow:hover {
@@ -532,65 +539,63 @@ img {
   box-shadow: 0 3px 8px rgba(230, 131, 0, 0.6);
 }
 
-
-/* رسپانسیو برای موبایل */
 @media (max-width: 768px) {
-  .product-tabs {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
+  .slider-row > div[class*="col-"] {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    margin-bottom: 0.75rem;
+    flex:  48%; /* دو تا کارت در هر ردیف */
+    max-width: 50%;
+  }
+    /* کارت سوم وسط قرار بگیره */
+    .slider-row > div[class*="col-"]:nth-child(3) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  .card-img-wrapper {
+    height: 180px; /* کمی کوچکتر برای موبایل */
   }
 
-  .slider-buttons {
-    display: none !important;
+  .card-img-top {
+    object-fit: cover;
+    height: 110%;
+    width: 110%;
   }
 
-  .middle-tabs {
-    padding-bottom: 4px;
+  .card-body {
+    padding: 0.75rem 0.2rem;
+  }
+
+  /* برای جلوگیری از هم‌پوشانی آیکون‌ها */
+  .card-icons {
+    top: px;
+    right: px;
   }
 }
-.scroll-menu {
-  border-radius: 25px;
-  background-color: #fffaf3;
-  box-shadow: 0 4px 12px rgba(255, 159, 26, 0.15);
-  overflow-x: auto;
-  white-space: nowrap;
-  padding: 10px 20px;
-}
 
-.scroll-menu span {
-  padding: 6px 14px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
-.scroll-menu span:hover {
-  background-color: rgba(255, 159, 26, 0.1);
-}
+@media (max-width: 768px) {
+  .col-md-3 > .card {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
 
-.scroll-menu::-webkit-scrollbar {
-  display: none;
-}
+  .col-md-3 .card-title {
+    font-size: 1rem;
+  }
 
-.product-slider-wrapper {
-  position: relative;
-  overflow: hidden;
-}
+  .col-md-3 .btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+  }
 
-.product-slider {
-  transition: transform 0.4s ease;
-  scroll-behavior: smooth;
-}
+  .col-md-3 .card-img-top {
+    max-height: 120px;
+    object-fit: contain;
+  }
 
-.product-card {
-  width: 250px;
-  height: 180px;
-  background-color: #f7f7f7;
-  border-radius: 12px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .col-md-3 .card-body {
+    padding: 0.5rem;
+  }
 }
-
