@@ -1,5 +1,5 @@
 .top-barshare {
-  background:  linear-gradient(90deg, #d7447fad, #de5e19de);
+  background:  linear-gradient(90deg, #ebcdd9ad, #de5e19de);
   max-width: 85%;
   margin: 0 auto;
   border-radius: 10px 10px 0 0; /* فقط بالا گرد، پایین صاف */
@@ -7,7 +7,7 @@
 
 
 .top-icons a {
-  color: #770808cf; /* آیکون‌ها مشکی باشن که رو زرد دیده شن */
+  color: #770808cf; 
   font-size: 1.3rem;
 }
 
@@ -33,7 +33,7 @@
   }
 }
 .my-navbar {
-  background: radial-gradient(#c30863ad, #9a4804b8);
+  background: repeating-linear-gradient( #572903d4 , #cc6600) ;
   padding: 15px 25px;
   border-radius: 25px;
   /*گوشه‌هایگرد*/width: 90%;
