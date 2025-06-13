@@ -21,7 +21,7 @@ import Login from './components/Login';
 import ScrollToTop from './components/ScrollToTop';
 import Register from './components/Register';
 import About from './components/About';
-
+import Contact from './components/Contact';
 // ✨ صفحه اصلی
 function MainLayout() {
   return (
@@ -82,6 +82,12 @@ function App() {
             <About />
           </PageLayoutWithNavbar>
         } />
+          <Route path="/contact" element={
+    <PageLayoutWithNavbar>
+      <Contact />
+    </PageLayoutWithNavbar>
+  } />
+
 
       </Routes>
     </Router>
