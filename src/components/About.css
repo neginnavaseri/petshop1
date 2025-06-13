@@ -1,0 +1,399 @@
+.abt-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 15px;
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    color: #4a4a4a;
+
+  }
+  
+  .abt-header {
+    background: linear-gradient( #fffefe, #e98566d6);
+    /* گرادیان پرتغالی تیره نارنجی به روشن */
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(216, 67, 21, 0.6);
+    color: white;
+    text-align: center;
+  }
+  
+  .abt-header__title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #fff3e0;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.25);
+  }
+  
+  .abt-header__desc {
+    font-size: 1.2rem;
+    color: #ffe0b2;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .abt-header__actions {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .abt-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .abt-btn--outline-primary {
+    background: linear-gradient(45deg, #da6e02, #ff7eb3);
+    /* گرادیان گلبه‌ای صورتی ملایم */
+    border-color: transparent;
+    color: white;
+    box-shadow: 0 6px 15px rgba(191, 42, 25, 0.6);
+  }
+  
+  .abt-btn--outline-primary:hover {
+    background: linear-gradient(45deg, #ff4b6e, #ff6f91);
+    box-shadow: 0 8px 20px rgba(255, 75, 110, 0.8);
+    color: white;
+  }
+  
+  .abt-btn--success {
+    background-color: #4caf50;
+    border-color: #4caf50;
+    color: white;
+  }
+  
+  .abt-btn--success:hover {
+    background-color: #388e3c;
+    border-color: #388e3c;
+    box-shadow: 0 5px 15px rgba(56, 142, 60, 0.7);
+  }
+  
+  .abt-icon {
+    font-size: 1.3rem;
+    margin-right: 8px;
+    color: inherit;
+  }
+  
+  /* ریسپانسیو */
+  @media (max-width: 768px) {
+    .abt-header__title {
+      font-size: 2rem;
+    }
+    .abt-header__desc {
+      font-size: 1rem;
+    }
+    .abt-btn {
+      font-size: 1rem;
+      padding: 10px 20px;
+      
+    }
+    
+    .abt-carousel__item {
+        padding-left: 6px;
+        padding-right: 6px;
+      }
+  }
+  .abt-carousel__item {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .abt-record__title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d84315;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.abt-record__card {
+  background: linear-gradient(145deg, #fff1e6, #ffd6c2);
+  color: #4a4a4a;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(216, 67, 21, 0.2);
+}
+
+.abt-record__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(216, 67, 21, 0.3);
+}
+
+.abt-record__value {
+  font-size: 1.8rem;
+  margin-bottom: 5px !important;
+}
+
+.abt-record__label {
+  font-size: 0.95rem;
+  color: #6d6d6d;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .abt-record__item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .abt-record__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .abt-record__card {
+    padding: 20px;
+  }
+
+  .abt-record__value {
+    font-size: 1.6rem;
+  }
+}
+.abt-record__card {
+    background: linear-gradient(145deg, #fff1e6, #ffd6c2);
+    color: #4a4a4a;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(216, 67, 21, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 30px 20px;
+    height: 150px !important; /* یک ارتفاع ثابت برای یکنواختی */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .abt-record__card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(216, 67, 21, 0.3);
+  }
+  
+  .abt-record__value {
+    font-size: 2rem;
+    margin-bottom: 1px;
+  }
+  
+  .abt-record__label {
+    font-size: 1rem;
+    color: #6d6d6d;
+  }
+  
+  /* ریسپانسیو */
+  @media (max-width: 768px) {
+    .abt-record__item {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  
+    .abt-record__card {
+      height: 140px;
+      padding: 25px 15px;
+    }
+  
+    .abt-record__value {
+      font-size: 1.6rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .abt-record__item {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  
+    .abt-record__card {
+      height: 140px;
+    }
+  }
+  .abt-whyChoose__card {
+    background: linear-gradient(145deg, #fffaf5, #ffe3cc);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(216, 67, 21, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 0.8s ease forwards;
+  }
+  
+  .abt-whyChoose__card:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .abt-whyChoose__card:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  .abt-whyChoose__card:nth-child(3) {
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .abt-whyChoose__card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(216, 67, 21, 0.3);
+  }
+  
+  .abt-whyChoose__cardTitle {
+    color: #d84315; /* پرتقالی پررنگ */
+  }
+  
+  .abt-whyChoose__cardDesc {
+    font-size: 1rem;
+    color: #5f5f5f;
+  }
+  
+  @media (max-width: 768px) {
+    .abt-whyChoose__cards {
+      margin-top: 20px;
+    }
+  }
+  .abt-team__card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    border-radius: 1rem !important;
+    background: #a4849041 !important;
+    border: none;
+    padding-bottom: 1rem !important;
+    margin-top: 2px !important;
+    margin-bottom: 50px !important;
+    max-height: 450px;
+    overflow: hidden;
+  
+}
+  
+  .abt-team__card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 0 30px rgba(181, 123, 123, 0.08) !important;
+    -webkit-transform: translateY(-10px) !important;
+    -moz-transform: translateY(-10px) !important;
+    -ms-transform: translateY(-10px) !important;
+    -o-transform: translateY(-10px) !important;
+}
+  
+  .abt-team__img {
+    border-top-left-radius: 1rem !important;
+    border-top-right-radius: 1rem !important;
+    height: 250px !important;
+    object-fit: cover !important;
+  }
+  
+  .abt-team__socialLink i {
+    font-size: 1.25rem !important;
+    color: #268208 !important;
+    transition: color 0.3s ease, transform 0.3s ease !important;
+    -webkit-transition: color 0.3s ease, transform 0.3s ease !important;
+    -moz-transition: color 0.3s ease, transform 0.3s ease !important;
+    -ms-transition: color 0.3s ease, transform 0.3s ease !important;
+    -o-transition: color 0.3s ease, transform 0.3s ease !important;
+}
+  
+  .abt-team__socialLink:hover i {
+    color: #ff7f50 !important;
+    /*رنگمرجانیخاص*/transform: scale(1.3) rotate(5deg) !important;
+     -webkit-transform: scale(1.3) rotate(5deg);
+    -moz-transform: scale(1.3) rotate(5deg);
+    -ms-transform: scale(1.3) rotate(5deg);
+    -o-transform: scale(1.3) rotate(5deg);
+}
+
+.abt-team__role {
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+}
+
+.role-developer {
+  color: #7c0606f0 !important; 
+}
+
+.role-ui {
+  color: #880218 !important; 
+}
+
+.role-graphic {
+  color:  #880218 !important;
+}
+
+/* تصویر کارت - نمایش واضح و بزرگ از بالا */
+.abt-team__img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* متن‌ها */
+.abt-team__name {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.abt-team__role {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.abt-team__desc {
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* آیکون شبکه‌های اجتماعی */
+.abt-team__socialLink i {
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.abt-team__socialLink:hover i {
+  color: #0d6efd;
+}
+
+/* 📱 واکنش‌گرا برای موبایل */
+@media (max-width: 576px) {
+  .abt-team__title {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+  }
+
+  .abt-team__item {
+    padding: 0 1rem;
+  }
+
+  .abt-team__img {
+    height: 220px;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .abt-team__name {
+    font-size: 1.1rem;
+  }
+
+  .abt-team__role {
+    font-size: 0.85rem;
+  }
+
+  .abt-team__desc {
+    font-size: 0.8rem;
+  }
+
+  .abt-team__socialLink i {
+    font-size: 1rem;
+  }
+}

@@ -20,8 +20,9 @@ import ForgotPassword from './components/ForgotPassword';
 import Login from './components/Login';
 import ScrollToTop from './components/ScrollToTop';
 import Register from './components/Register';
+import About from './components/About';
 
-// صفحه اصلی با همه اجزا + Navbar + Footer
+// ✨ صفحه اصلی
 function MainLayout() {
   return (
     <>
@@ -33,12 +34,12 @@ function MainLayout() {
       <ProductSlider />
       <WatermelonBanner />
       <BlogSlider />
-      <Footer /> {/* فوتر اینجا */}
+      <Footer />
     </>
   );
 }
 
-// صفحات مثل Login و ForgotPassword با Navbar و Footer
+// ✨ صفحاتی که فقط یک کامپوننت دارند مثل لاگین، ثبت‌نام، درباره ما، ...
 function PageLayoutWithNavbar({ children }) {
   return (
     <>
@@ -46,7 +47,7 @@ function PageLayoutWithNavbar({ children }) {
       <div className="container my-5">
         {children}
       </div>
-      <Footer /> {/* فوتر اینجا */}
+      <Footer />
     </>
   );
 }
@@ -57,24 +58,31 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<MainLayout />} />
+
         <Route path="/login" element={
           <PageLayoutWithNavbar>
             <Login />
           </PageLayoutWithNavbar>
         } />
+
         <Route path="/forgot-password" element={
           <PageLayoutWithNavbar>
             <ForgotPassword />
           </PageLayoutWithNavbar>
         } />
-        <Route
-  path="/register"
-  element={
-    <PageLayoutWithNavbar>
-      <Register />
-    </PageLayoutWithNavbar>
-  }
-/>
+
+        <Route path="/register" element={
+          <PageLayoutWithNavbar>
+            <Register />
+          </PageLayoutWithNavbar>
+        } />
+
+        <Route path="/about" element={
+          <PageLayoutWithNavbar>
+            <About />
+          </PageLayoutWithNavbar>
+        } />
+
       </Routes>
     </Router>
   );

@@ -64,11 +64,14 @@ function Navbar() {
               <img src="/images/Group-258-2.png" alt="Logo" style={{ height: "40px" }} />
             </a>
             <div className="d-flex gap-4 justify-content-center align-items-center">
-              <a className="nav-link my-nav-link" href="/">خانه</a>
-              <a className="nav-link my-nav-link" href="/">فروشگاه</a>
-              <a className="nav-link my-nav-link" href="/">وبلاگ</a>
-              <a className="nav-link my-nav-link" href="/">تماس باما</a>
-              <a className="nav-link my-nav-link" href="/">درباره ما</a>
+            <Link className="nav-link my-nav-link" to="/">خانه</Link>
+<Link className="nav-link my-nav-link" to="/shop">فروشگاه</Link>
+<Link className="nav-link my-nav-link" to="/blog">وبلاگ</Link>
+<Link className="nav-link my-nav-link" to="/contact">تماس باما</Link>
+<Link className="nav-link my-nav-link" to="/about">درباره ما</Link>
+
+
+
             </div>
             <div className="d-flex align-items-center gap-3">
               <a href="/cart" className="my-icon-link" style={{ fontSize: "1.4rem" }}>
@@ -96,12 +99,23 @@ function Navbar() {
             </button>
           </form>
           <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li className="nav-item"><a className="nav-link text-white" href="/">خانه</a></li>
-            <li className="nav-item"><a className="nav-link text-white" href="/">فروشگاه</a></li>
-            <li className="nav-item"><a className="nav-link text-white" href="/">وبلاگ</a></li>
-            <li className="nav-item"><a className="nav-link text-white" href="/">تماس باما</a></li>
-            <li className="nav-item"><a className="nav-link text-white" href="/">درباره ما</a></li>
-          </ul>
+  <li className="nav-item">
+    <Link to="/" className="nav-link text-white">خانه</Link>
+  </li>
+  <li className="nav-item">
+    <Link to="/shop" className="nav-link text-white">فروشگاه</Link>
+  </li>
+  <li className="nav-item">
+    <Link to="/blog" className="nav-link text-white">وبلاگ</Link>
+  </li>
+  <li className="nav-item">
+    <Link to="/contact" className="nav-link text-white">تماس باما</Link>
+  </li>
+  <li className="nav-item">
+    <Link to="/about" className="nav-link text-white">درباره ما</Link>
+  </li>
+</ul>
+
         </div>
       </div>
 

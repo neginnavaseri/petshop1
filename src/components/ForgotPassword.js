@@ -1,11 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 function ForgotPassword() {
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+
+  const validateEmail = (email) => {
+    // الگوی ساده بررسی ایمیل
+    const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    return regex.test(email);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!email.trim()) {
+      setError('وارد کردن ایمیل الزامی است.');
+    } else if (!validateEmail(email)) {
+      setError('لطفاً یک ایمیل معتبر وارد کنید.');
+    } else {
+      setError('');
+      // عملیات ارسال لینک بازیابی
+      alert("لینک بازیابی برای ایمیل ارسال شد ✅");
+    }
+  };
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}  // انیمیشن کل کانتینر
+      initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       className="container py-5"
@@ -36,38 +59,45 @@ function ForgotPassword() {
 
       {/* فرم فراموشی رمز عبور */}
       <h2 className="mb-4">فراموشی رمز عبور</h2>
-      <form>
+      <form onSubmit={handleSubmit} noValidate>
         <div className="mb-3">
-          <label htmlFor="email" className="form-label" >
+          <label htmlFor="email" className="form-label">
             ایمیل خود را وارد کنید:
           </label>
-          <input type="email" className="form-control" id="email" />
+          <input
+            type="email"
+            className={`form-control ${error ? 'is-invalid' : ''}`}
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          {error && <div className="invalid-feedback">{error}</div>}
         </div>
-        <button
-  type="submit"
-  className="btn btn-primary"
-  style={{
-    backgroundColor: '#28a745', // سبز باحال
-    borderColor: '#28a745',
-    borderRadius: '8px',
-    padding: '10px 20px',
-    fontWeight: '600',
-    fontSize: '1.1rem',
-    boxShadow: '0 4px 8px rgba(40, 167, 69, 0.4)',
-    transition: 'background-color 0.3s ease, box-shadow 0.3s ease',
-  }}
-  onMouseEnter={e => {
-    e.currentTarget.style.backgroundColor = '#218838';
-    e.currentTarget.style.boxShadow = '0 6px 12px rgba(33, 136, 56, 0.6)';
-  }}
-  onMouseLeave={e => {
-    e.currentTarget.style.backgroundColor = '#28a745';
-    e.currentTarget.style.boxShadow = '0 4px 8px rgba(40, 167, 69, 0.4)';
-  }}
->
-  بازگردانی گذرواژه
-</button>
 
+        <button
+          type="submit"
+          className="btn btn-primary"
+          style={{
+            backgroundColor: '#28a745',
+            borderColor: '#28a745',
+            borderRadius: '8px',
+            padding: '10px 20px',
+            fontWeight: '600',
+            fontSize: '1.1rem',
+            boxShadow: '0 4px 8px rgba(40, 167, 69, 0.4)',
+            transition: 'background-color 0.3s ease, box-shadow 0.3s ease',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#218838';
+            e.currentTarget.style.boxShadow = '0 6px 12px rgba(33, 136, 56, 0.6)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = '#28a745';
+            e.currentTarget.style.boxShadow = '0 4px 8px rgba(40, 167, 69, 0.4)';
+          }}
+        >
+          بازگردانی گذرواژه
+        </button>
       </form>
     </motion.div>
   );

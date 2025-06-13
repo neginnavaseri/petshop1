@@ -28,6 +28,10 @@
     margin: 0 auto 12px;
     box-shadow: 0 0 10px rgba(5, 82, 63, 0.997) !important;
   }
+  .abt-carousel__item {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
   
   /* ریسپانسیو برای موبایل */
   @media (max-width: 576px) {
