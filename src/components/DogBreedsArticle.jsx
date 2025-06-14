@@ -1,8 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
 const DogBreedsArticle = () => {
+  const [formData, setFormData] = useState({ name: '', email: '', comment: '' });
+  const [errors, setErrors] = useState({});
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  const validate = () => {
+    const errors = {};
+    if (!formData.name.trim()) errors.name = 'لطفاً نام خود را وارد کنید.';
+    if (!formData.email.trim()) {
+      errors.email = 'لطفاً ایمیل خود را وارد کنید.';
+    } else if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(formData.email)) {
+      errors.email = 'لطفاً یک ایمیل معتبر وارد کنید.';
+    }
+    if (!formData.comment.trim()) errors.comment = 'لطفاً نظر خود را وارد کنید.';
+    return errors;
+  };
+
+  const handleChange = (e) => {
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    setErrors(prev => ({ ...prev, [e.target.name]: '' }));
+    setSubmitSuccess(false);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      setSubmitSuccess(false);
+    } else {
+      // اینجا می‌تونید ارسال فرم به سرور یا هر کاری که می‌خواهید انجام بدید
+      console.log('فرم ارسال شد:', formData);
+      setErrors({});
+      setSubmitSuccess(true);
+      setFormData({ name: '', email: '', comment: '' });
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -17,8 +54,7 @@ const DogBreedsArticle = () => {
             src="/images/blog1.jpg"
             className="card-img-top"
             alt="انواع نژاد سگ‌ها"
-            style={{ height: '500px', objectFit: 'cover' ,            cursor:'default'
-            }}
+            style={{ height: '500px', objectFit: 'cover', cursor: 'default' }}
           />
         </div>
       </div>
@@ -30,12 +66,11 @@ const DogBreedsArticle = () => {
           style={{
             maxWidth: '900px',
             width: '100%',
-            marginBottom: '10rem',
+            marginBottom: '3rem',
             cursor: 'default',
             backgroundColor: '#fdfdfd',
             boxShadow: '0 0 20px rgba(0, 0, 0, 0.05)',
             borderRadius: '1rem',
-            cursor:'default'
           }}
         >
           <h2
@@ -87,10 +122,116 @@ const DogBreedsArticle = () => {
         </div>
       </div>
 
+      {/* فرم ثبت نظر */}
+      <div className="container d-flex justify-content-center">
+        <div
+          className="card p-4"
+          style={{
+            maxWidth: '700px',
+            width: '100%',
+            marginBottom: '10rem',
+            borderRadius: '1rem',
+            backgroundColor: '#ffffff',
+            boxShadow: '0 0 15px rgba(0,0,0,0.05)',
+            cursor: 'default'
+          }}
+        >
+          <h3
+            style={{
+              textAlign: 'center',
+              marginBottom: '1.5rem',
+              color: '#2c3e50',
+              fontWeight: '700',
+            }}
+          >
+            ثبت نظر شما
+          </h3>
+
+          {submitSuccess && (
+            <p
+              style={{
+                color: 'green',
+                textAlign: 'center',
+                marginBottom: '1rem',
+                fontWeight: '600',
+              }}
+            >
+              نظر شما با موفقیت ثبت شد. ممنون از مشارکت شما!
+            </p>
+          )}
+
+          <form onSubmit={handleSubmit} noValidate>
+            {/* نام */}
+            <div className="mb-3">
+              <label htmlFor="name" className="form-label" style={{ fontWeight: '600' }}>
+                نام:
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                className={`form-control ${errors.name ? 'is-invalid' : ''}`}
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="نام خود را وارد کنید"
+              />
+              {errors.name && (
+                <div className="invalid-feedback">{errors.name}</div>
+              )}
+            </div>
+
+            {/* ایمیل */}
+            <div className="mb-3">
+              <label htmlFor="email" className="form-label" style={{ fontWeight: '600' }}>
+                ایمیل:
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                className={`form-control ${errors.email ? 'is-invalid' : ''}`}
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="ایمیل خود را وارد کنید"
+              />
+              {errors.email && (
+                <div className="invalid-feedback">{errors.email}</div>
+              )}
+            </div>
+
+            {/* نظر */}
+            <div className="mb-3">
+              <label htmlFor="comment" className="form-label" style={{ fontWeight: '600' }}>
+                نظر:
+              </label>
+              <textarea
+                id="comment"
+                name="comment"
+                className={`form-control ${errors.comment ? 'is-invalid' : ''}`}
+                rows="5"
+                value={formData.comment}
+                onChange={handleChange}
+                placeholder="نظر خود را اینجا بنویسید"
+              ></textarea>
+              {errors.comment && (
+                <div className="invalid-feedback">{errors.comment}</div>
+              )}
+            </div>
+
+            <button
+              type="submit"
+              className="btn short-cute-btn mt-2"
+              style={{ fontWeight: '600' }}
+            >
+              ارسال نظر
+            </button>
+          </form>
+        </div>
+      </div>
+
       <Footer />
     </>
   );
 };
 
 export default DogBreedsArticle;
-

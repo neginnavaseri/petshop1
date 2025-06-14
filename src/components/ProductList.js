@@ -275,21 +275,95 @@ function ProductSliderWithStaticCard() {
     <h6 className="fw-bold text-orange orange-title mb-3">
       برای دریافت مشاوره و راهنمایی فرم زیر را تکمیل کنید.
     </h6>
-    <form>
-  <div className="mb-3">
-    <label className="form-label">ایمیل</label>
-    <input type="email" className="form-control" placeholder="ایمیل خود را وارد کنید" />
-  </div>
-  <div className="mb-3">
-    <label className="form-label">پیام شما (اختیاری)</label>
-    <textarea className="form-control" rows="3" placeholder="پیام خود را بنویسید"></textarea>
-  </div>
-  <button className="btn short-cute-btn mt-2">ثبت</button>
 
-</form>
+    {/* فرم مشاوره */}
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        const email = e.target.email.value.trim();
+        const message = e.target.message.value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+        const errorDiv = document.getElementById("form-error");
+        const successDiv = document.getElementById("form-success");
+
+        if (!emailPattern.test(email)) {
+          errorDiv.style.display = "block";
+          successDiv.style.display = "none";
+          return;
+        }
+
+        // موفقیت
+        errorDiv.style.display = "none";
+        successDiv.style.display = "block";
+
+        // پاک‌سازی فرم
+        e.target.reset();
+
+        // مخفی کردن پیام موفقیت بعد از 3 ثانیه
+        setTimeout(() => {
+          successDiv.style.display = "none";
+        }, 3000);
+      }}
+    >
+      <div className="mb-3">
+        <label className="form-label">ایمیل</label>
+        <input
+          name="email"
+          type="email"
+          className="form-control"
+          placeholder="ایمیل خود را وارد کنید"
+        />
+      </div>
+
+      <div className="mb-3">
+        <label className="form-label">پیام شما (اختیاری)</label>
+        <textarea
+          name="message"
+          className="form-control"
+          rows="3"
+          placeholder="پیام خود را بنویسید"
+        ></textarea>
+      </div>
+
+      {/* پیام خطا */}
+      <div
+        id="form-error"
+        className="mb-2"
+        style={{
+          display: "none",
+          color: "#d8000c",
+          backgroundColor: "#ffdddd",
+          padding: "8px",
+          borderRadius: "8px",
+        }}
+      >
+        لطفاً یک ایمیل معتبر وارد کنید!
+      </div>
+
+      {/* پیام موفقیت */}
+      <div
+        id="form-success"
+        className="mb-2"
+        style={{
+          display: "none",
+          color: "#155724",
+          backgroundColor: "#d4edda",
+          padding: "8px",
+          borderRadius: "8px",
+        }}
+      >
+        پیام شما با موفقیت ثبت شد 🌟
+      </div>
+
+      <button type="submit" className="btn short-cute-btn mt-2">
+        ثبت
+      </button>
+    </form>
   </div>
 </div>
+
+
       </div>
     </div>
   </section>

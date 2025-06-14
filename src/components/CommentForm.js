@@ -6,8 +6,9 @@ const CommentForm = () => {
   const [website, setWebsite] = useState('');
   const [comment, setComment] = useState('');
   const [remember, setRemember] = useState(false);
-
   const [errors, setErrors] = useState({});
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState(''); // ✅ پیام کلی خطا
 
   const validate = () => {
     const newErrors = {};
@@ -22,10 +23,17 @@ const CommentForm = () => {
     e.preventDefault();
     const validationErrors = validate();
     setErrors(validationErrors);
-    if (Object.keys(validationErrors).length > 0) return;
 
-    alert(`دیدگاه فرستاده شد:\nنام: ${name}\nایمیل: ${email}\nوبسایت: ${website}\nدیدگاه: ${comment}\nذخیره اطلاعات: ${remember ? 'بله' : 'خیر'}`);
-    
+    if (Object.keys(validationErrors).length > 0) {
+      setErrorMessage('لطفاً تمام فیلدهای الزامی را به درستی وارد کنید.');
+      setSuccessMessage('');
+      return;
+    }
+
+    // موفقیت
+    setSuccessMessage('دیدگاه شما با موفقیت ثبت شد. پیروز باشید! 🎉');
+    setErrorMessage('');
+
     // ریست فرم
     setName('');
     setEmail('');
@@ -33,14 +41,32 @@ const CommentForm = () => {
     setComment('');
     setRemember(false);
     setErrors({});
+
+    // حذف پیام موفقیت بعد از چند ثانیه
+    setTimeout(() => {
+      setSuccessMessage('');
+    }, 6000);
   };
 
   return (
     <div className="container my-5">
       <h2 className="text-center mb-4">ثبت نظر</h2>
-      <form onSubmit={handleSubmit} className="w-100 w-md-75 mx-auto">
 
-        {/* دیدگاه */}
+      {/* ✅ پیام موفقیت */}
+      {successMessage && (
+        <div className="alert alert-success text-center fw-bold" role="alert">
+          {successMessage}
+        </div>
+      )}
+
+      {/* ✅ پیام کلی خطا */}
+      {errorMessage && (
+        <div className="alert alert-danger text-center fw-bold" role="alert">
+          {errorMessage}
+        </div>
+      )}
+
+      <form onSubmit={handleSubmit} className="w-100 w-md-75 mx-auto">
         <div className="mb-3">
           <label className="form-label">دیدگاه</label>
           <textarea
@@ -52,7 +78,6 @@ const CommentForm = () => {
           {errors.comment && <div className="invalid-feedback">{errors.comment}</div>}
         </div>
 
-        {/* نام */}
         <div className="mb-3">
           <label className="form-label">نام شما</label>
           <input
@@ -64,7 +89,6 @@ const CommentForm = () => {
           {errors.name && <div className="invalid-feedback">{errors.name}</div>}
         </div>
 
-        {/* ایمیل */}
         <div className="mb-3">
           <label className="form-label">ایمیل</label>
           <input
@@ -76,40 +100,34 @@ const CommentForm = () => {
           {errors.email && <div className="invalid-feedback">{errors.email}</div>}
         </div>
 
-        {/* وبسایت */}
         <div className="mb-3">
           <label className="form-label">وبسایت</label>
           <input
-            type="url"
             className="form-control"
             value={website}
             onChange={(e) => setWebsite(e.target.value)}
           />
         </div>
 
-        {/* چک‌باکس */}
-        
-{/* چک‌باکس مرتب چسبیده به متن از راست */}
-<div className="form-check mb-4" dir="rtl">
-  <label className="form-check-label d-flex align-items-center" htmlFor="rememberInfo">
-    <input
-      className="form-check-input ms-2"
-      type="checkbox"
-      checked={remember}
-      onChange={(e) => setRemember(e.target.checked)}
-      id="rememberInfo"
-    />
-    ذخیره نام، ایمیل و وبسایت من در مرورگر برای زمانی که دوباره دیدگاهی می‌نویسم.
-  </label>
-</div>
+        <div className="form-check mb-4" dir="rtl">
+          <label className="form-check-label d-flex align-items-center" htmlFor="rememberInfo">
+            <input
+              className="form-check-input ms-2"
+              type="checkbox"
+              checked={remember}
+              onChange={(e) => setRemember(e.target.checked)}
+              id="rememberInfo"
+            />
+            ذخیره نام، ایمیل و وبسایت من در مرورگر برای زمانی که دوباره دیدگاهی می‌نویسم.
+          </label>
+        </div>
 
-        {/* دکمه ارسال با استایل شیک */}
         <button
           type="submit"
-          className="btn btn-success px-4 py-2 fw-bold rounded-3"
+          className="btn short-cute-btn px-4 py-2 fw-bold rounded-3"
           style={{ fontSize: '1rem', letterSpacing: '0.5px' }}
         >
-           فرستادن دیدگاه
+          فرستادن دیدگاه
         </button>
       </form>
     </div>
