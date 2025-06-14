@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero2.css"; 
-
+import { Link } from "react-router-dom";
 function Hero2() {
   return (
     <div className="position-relative hero2-wrapper">
@@ -14,7 +14,14 @@ function Hero2() {
               محصولات وودمارت با تمرکز ویژه بر کیفیت و اصالت، انتخابی مطمئن برای همه‌ی دوستداران حیوانات خانگی هستند. هر محصول از مواد باکیفیت و طراحی هوشمندانه بهره می‌برد تا نیازهای متنوع حیوانات شما را به بهترین شکل ممکن برآورده کند. از غذاهای طبیعی و مقوی گرفته تا اسباب‌بازی‌های ایمن و مقاوم، وودمارت تضمین می‌کند که بهترین‌ها را برای سلامت و شادی پت شما فراهم آورد. با وودمارت، خیالتان راحت باشد که حیوان عزیزتان در کنار شما از بهترین مراقبت و توجه برخوردار است.
             </p>
             <div className="d-flex justify-content-center justify-content-lg-end gap-3">
-              <button className="btn btn-primary rounded-pill px-4 py-2">همکاری با وودمارت</button>
+              
+<Link
+  to="/contact"
+  className="btn btn-primary rounded-pill px-4 py-2"
+  style={{ textDecoration: "none", color: "white" }}
+>
+  همکاری با وودمارت
+</Link>
             </div>
           </div>
           {/* عکس سمت چپ با استایل کپسولی و انیمیشن تپش */}

@@ -134,7 +134,7 @@ const BlogSlider = () => {
 </div>
 
                 
-                <p className="read-more">ادامه مطلب</p>
+                <p className="btn short-cute-btn btn-sm px-3 py-1">ادامه مطلب</p>
               </div>
             ))}
           </div>

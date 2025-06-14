@@ -22,6 +22,15 @@ import ScrollToTop from './components/ScrollToTop';
 import Register from './components/Register';
 import About from './components/About';
 import Contact from './components/Contact';
+import Blog from './components/blog';
+import CommentForm from './components/CommentForm';
+import BlogDetail from './components/BlogDetail';
+import DogBreedsArticle from './components/DogBreedsArticle';
+import CatBreedsArticle from './components/CatBreedsArticle';
+import CatFoodArticle from './components/CatFoodArticle';
+import DogFoodArticle from './components/DogFoodArticle';
+import DogCareGuide from './components/DogCareGuide';
+
 // ✨ صفحه اصلی
 function MainLayout() {
   return (
@@ -87,6 +96,30 @@ function App() {
       <Contact />
     </PageLayoutWithNavbar>
   } />
+  <Route path="/blog" element={
+  <PageLayoutWithNavbar>
+    <Blog />
+  </PageLayoutWithNavbar>
+} />
+ <Route path="/articles/dog-breeds" element={<DogBreedsArticle />} />
+ <Route path="/articles/cat-breeds" element={<CatBreedsArticle />} />
+ <Route path="/articles/cat-food" element={<CatFoodArticle />} />
+ <Route path="/articles/dog-food" element={<DogFoodArticle />} />
+<Route path="/articles/dog-care" element={<DogCareGuide />} />
+
+<Route path="/comment-form" element={
+          <PageLayoutWithNavbar>
+            <CommentForm />
+          </PageLayoutWithNavbar>
+        } />
+        
+<Route path="/blog/:id" element={
+  <PageLayoutWithNavbar>
+    <BlogDetail />
+  </PageLayoutWithNavbar>
+} />
+
+
 
 
       </Routes>

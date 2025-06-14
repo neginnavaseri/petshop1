@@ -147,11 +147,11 @@ function About() {
         </div>
       </div>
 
-      <h2 className="abt-team__title text-center fw-bold my-5">اعضای تیم ما</h2>
-      <div className="abt-team__list row g-4 mb-5">
+      <h2 className="abt-team__title text-center fw-bold my-5"   style={{ cursor: 'default' }}>اعضای تیم ما</h2>
+      <div className="abt-team__list row g-4 mb-5"   style={{ cursor: 'default' }}>
         {/* کارت اول */}
         <div className="abt-team__item col-12 col-md-6 col-lg-3 text-center px-3">
-          <div className="abt-team__card card shadow-lg text-center border-0">
+          <div className="abt-team__card card shadow-lg text-center border-0"  style={{ cursor: 'default' }}>
             <img src="/images/آرش.jpg" className="abt-team__img card-img-top rounded-top" alt="آرش امیری" />
             <div className="abt-team__body card-body">
               <h5 className="abt-team__name card-title fw-bold">آرش امیری</h5>
@@ -176,7 +176,7 @@ function About() {
 
         {/* کارت دوم */}
         <div className="abt-team__item col-12 col-md-6 col-lg-3 text-center px-3">
-          <div className="abt-team__card card shadow-lg  text-center border-0">
+          <div className="abt-team__card card shadow-lg  text-center border-0"  style={{ cursor: 'default' }}>
             <img src="/images/محمد.jpg" className="abt-team__img card-img-top rounded-top" alt="محمد شهابی" />
             <div className="abt-team__body card-body">
               <h5 className="abt-team__name card-title fw-bold">محمد شهابی</h5>
@@ -201,7 +201,7 @@ function About() {
 
         {/* کارت سوم */}
         <div className="abt-team__item col-12 col-md-6 col-lg-3 text-center px-3">
-          <div className="abt-team__card card shadow-lg  text-center border-0">
+          <div className="abt-team__card card shadow-lg  text-center border-0"  style={{ cursor: 'default' }}>
             <img src="/images/رضا.jpg" className="abt-team__img card-img-top rounded-top" alt="رضارضایی" />
             <div className="abt-team__body card-body">
               <h5 className="abt-team__name card-title fw-bold">رضارضایی</h5>
@@ -225,8 +225,8 @@ function About() {
         </div>
 
         {/* کارت چهارم */}
-        <div className="abt-team__item col-12 col-md-6 col-lg-3 text-center px-3">
-          <div className="abt-team__card card shadow-lg  text-center border-0">
+        <div className="abt-team__item col-12 col-md-6 col-lg-3 text-center px-3"   style={{ cursor: 'default' }}>
+          <div className="abt-team__card card shadow-lg  text-center border-0"  style={{ cursor: 'default' }}>
             <img src="/images/صادق.jpg" className="abt-team__img card-img-top rounded-top" alt="صادق وحیدی" />
             <div className="abt-team__body card-body">
               <h5 className="abt-team__name card-title fw-bold">صادق وحیدی</h5>

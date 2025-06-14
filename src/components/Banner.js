@@ -29,6 +29,7 @@ export default function WhyUsSection() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         padding: '80px 0',
+        cursor:'default'
       }}
     >
       <Container>
@@ -48,7 +49,9 @@ export default function WhyUsSection() {
         <Row className="justify-content-center gy-4">
           {features.map((item, idx) => (
             <Col key={idx} xs={12} sm={6} md={4}>
-              <Card className="feature-card shadow-lg rounded-4 px-3 py-4 position-relative">
+              <Card className="feature-card shadow-lg rounded-4 px-3 py-4 position-relative" 
+                style={{ cursor: 'default' }}
+              >
                 <div className="icon-circle mb-3">
                   <img src={item.icon} alt={item.title} width="48" />
                 </div>
