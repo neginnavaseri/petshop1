@@ -122,6 +122,7 @@
   .download-btn.myket {
     background: linear-gradient(135deg, #b4f8c8, #a0e7e5);
     color: #003f3f;
+    text-decoration: none;
   }
   
   .download-btn.myket:hover {
@@ -133,6 +134,7 @@
   .download-btn.bazar {
     background: linear-gradient(135deg, #f7cf96, #e3a047);
     color: #5f2c2c;
+    text-decoration: none;
   }
   
   .download-btn.bazar:hover {
@@ -169,6 +171,7 @@
   
     .download-btn {
       width: 100%;
+      
     }
   }
   

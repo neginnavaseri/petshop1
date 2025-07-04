@@ -30,8 +30,12 @@ import CatBreedsArticle from './components/CatBreedsArticle';
 import CatFoodArticle from './components/CatFoodArticle';
 import DogFoodArticle from './components/DogFoodArticle';
 import DogCareGuide from './components/DogCareGuide';
+import ShopPage from './components/ShopPage';
+import Cart from './components/Cart';
 
-// ✨ صفحه اصلی
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function MainLayout() {
   return (
     <>
@@ -48,7 +52,6 @@ function MainLayout() {
   );
 }
 
-// ✨ صفحاتی که فقط یک کامپوننت دارند مثل لاگین، ثبت‌نام، درباره ما، ...
 function PageLayoutWithNavbar({ children }) {
   return (
     <>
@@ -63,67 +66,32 @@ function PageLayoutWithNavbar({ children }) {
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<MainLayout />} />
+    <>
+      <Router>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<MainLayout />} />
+          <Route path="/login" element={<PageLayoutWithNavbar><Login /></PageLayoutWithNavbar>} />
+          <Route path="/forgot-password" element={<PageLayoutWithNavbar><ForgotPassword /></PageLayoutWithNavbar>} />
+          <Route path="/register" element={<PageLayoutWithNavbar><Register /></PageLayoutWithNavbar>} />
+          <Route path="/about" element={<PageLayoutWithNavbar><About /></PageLayoutWithNavbar>} />
+          <Route path="/contact" element={<PageLayoutWithNavbar><Contact /></PageLayoutWithNavbar>} />
+          <Route path="/blog" element={<PageLayoutWithNavbar><Blog /></PageLayoutWithNavbar>} />
+          <Route path="/blog/:id" element={<PageLayoutWithNavbar><BlogDetail /></PageLayoutWithNavbar>} />
+          <Route path="/comment-form" element={<PageLayoutWithNavbar><CommentForm /></PageLayoutWithNavbar>} />
+          <Route path="/articles/dog-breeds" element={<PageLayoutWithNavbar><DogBreedsArticle /></PageLayoutWithNavbar>} />
+          <Route path="/articles/cat-breeds" element={<PageLayoutWithNavbar><CatBreedsArticle /></PageLayoutWithNavbar>} />
+          <Route path="/articles/cat-food" element={<PageLayoutWithNavbar><CatFoodArticle /></PageLayoutWithNavbar>} />
+          <Route path="/articles/dog-food" element={<PageLayoutWithNavbar><DogFoodArticle /></PageLayoutWithNavbar>} />
+          <Route path="/articles/dog-care" element={<PageLayoutWithNavbar><DogCareGuide /></PageLayoutWithNavbar>} />
+          <Route path="/shop" element={<PageLayoutWithNavbar><ShopPage /></PageLayoutWithNavbar>} />
+          <Route path="/cart" element={<PageLayoutWithNavbar><Cart /></PageLayoutWithNavbar>} />
+        </Routes>
+      </Router>
 
-        <Route path="/login" element={
-          <PageLayoutWithNavbar>
-            <Login />
-          </PageLayoutWithNavbar>
-        } />
-
-        <Route path="/forgot-password" element={
-          <PageLayoutWithNavbar>
-            <ForgotPassword />
-          </PageLayoutWithNavbar>
-        } />
-
-        <Route path="/register" element={
-          <PageLayoutWithNavbar>
-            <Register />
-          </PageLayoutWithNavbar>
-        } />
-
-        <Route path="/about" element={
-          <PageLayoutWithNavbar>
-            <About />
-          </PageLayoutWithNavbar>
-        } />
-          <Route path="/contact" element={
-    <PageLayoutWithNavbar>
-      <Contact />
-    </PageLayoutWithNavbar>
-  } />
-  <Route path="/blog" element={
-  <PageLayoutWithNavbar>
-    <Blog />
-  </PageLayoutWithNavbar>
-} />
- <Route path="/articles/dog-breeds" element={<DogBreedsArticle />} />
- <Route path="/articles/cat-breeds" element={<CatBreedsArticle />} />
- <Route path="/articles/cat-food" element={<CatFoodArticle />} />
- <Route path="/articles/dog-food" element={<DogFoodArticle />} />
-<Route path="/articles/dog-care" element={<DogCareGuide />} />
-
-<Route path="/comment-form" element={
-          <PageLayoutWithNavbar>
-            <CommentForm />
-          </PageLayoutWithNavbar>
-        } />
-        
-<Route path="/blog/:id" element={
-  <PageLayoutWithNavbar>
-    <BlogDetail />
-  </PageLayoutWithNavbar>
-} />
-
-
-
-
-      </Routes>
-    </Router>
+      {/* ✅ نمایش نوتیفیکیشن‌ها */}
+      <ToastContainer position="bottom-left" autoClose={3000} />
+    </>
   );
 }
 

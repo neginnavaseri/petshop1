@@ -6,13 +6,12 @@ const WatermelonBanner = () => {
     <>
       {/* عکس جداگانه بالای نوار، بزرگ و چپ‌چین */}
       <div style={{ width: "100%", textAlign: "center", marginBottom: "20px", overflow: "visible" }}>
-  <img 
-    src="/images/top.png" 
-    alt="عکس بالای نوار" 
-    style={{ maxWidth: "500px", height: "auto" }} 
-  />
-</div>
-
+        <img 
+          src="/images/top.png" 
+          alt="عکس بالای نوار" 
+          style={{ maxWidth: "500px", height: "auto" }} 
+        />
+      </div>
 
       <div className="watermelon-banner">
         <div className="top-text">WOODMART APP</div> 
@@ -24,8 +23,22 @@ const WatermelonBanner = () => {
             فقط کافیه وصل بشی و تجربه‌ای تازه از خرید و خدمات رو حس کنی.  
           </p>
           <div className="buttons">
-            <button className="download-btn myket">دریافت از مایکت</button>
-            <button className="download-btn bazar">دریافت از بازار</button>
+            <a
+              href="https://myket.ir"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="download-btn myket"
+            >
+              دریافت از مایکت
+            </a>
+            <a
+              href="https://cafebazaar.ir"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="download-btn bazar"
+            >
+              دریافت از بازار
+            </a>
           </div>
           <div className="matnman">    
             <br />

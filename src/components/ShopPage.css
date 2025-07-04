@@ -1,0 +1,168 @@
+/* تایتل صفحه فروشگاه */
+h2.text-center {
+    font-size: 2.5rem;
+    color: #ff7b00; /* پرتقالی خوش‌رنگ */
+    text-shadow: 1px 1px 3px rgba(255, 123, 0, 0.2);
+  }
+  
+  /* دکمه‌های فیلتر دسته‌بندی */
+  .btn-outline-secondary {
+    border-color: #ffa94d !important;
+    color: #ff7b00 !important;
+    background-color: rgba(89, 171, 134, 0.267);
+    font-weight: bold;
+    border-radius: 50px; /* حالت کپسولی */
+    transition: all 0.3s ease;
+  }
+  
+  .btn-outline-secondary:hover {
+    background-color: #ff7b00 !important;
+    color: rgb(147, 21, 21) !important;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+  }
+  
+  /* وقتی دکمه فعال شده (انتخاب شده) */
+  .btn.btn-primary {
+    background-color: #ff7b00;
+    border-color: #ffa94d;
+    font-weight: bold;
+    border-radius: 50px;
+  }
+  
+
+
+
+
+/* فاصله بین کارت‌ها برای جا دادن توضیحات */
+.card-wrapper {
+    margin-bottom: 100px; /* فضای کافی زیر هر کارت */
+    position: relative;
+  }
+  
+  /* کارت محصول */
+  .card.h-100 {
+    transition: all 0.3s ease-in-out;
+    background-color: #ffe4ec; /* صورتی ملایم */
+    border: none;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card.h-100:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 182, 193, 0.3); /* سایه گلبه‌ای */
+  }
+
+
+
+/* دکمه افزودن به سبد خرید */
+.btn-outline-primary {
+    border-color: #ff69b4;
+    color: #ff69b4;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    border-radius: 25px;
+    font-weight: bold;
+  }
+  
+.btn-add-buy:hover {
+    background-color: #ff69b4;
+    color: white;
+    box-shadow: 0 0 10px #ffb6c1;
+  }
+  
+  /* فیلترها */
+  .btn.btn-outline-secondary {
+    border-radius: 25px;
+  }
+  
+/* دکمه‌های کپسولی و کیوت پرتقالی */
+.btn-add-buy {
+    background-color: #ffa94d; /* پرتقالی ملایم */
+    border-color: #ffa94d;
+    color: white;
+    border-radius: 50px; /* کپسولییییی 🍊 */
+    padding: 10px 25px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.2);
+  }
+  
+  .btn-add-buy:hover {
+    background-color: #ff7f0e; /* پرتقالی پررنگ و شاد */
+    border-color: #ff7f0e;
+    color: #fff5e6;
+    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+    transform: translateY(-2px);
+  }
+  
+
+
+  /* دکمه outline برای استایل متفاوت پرتقالی */
+.btn-outline-primary {
+    background-color: white;
+    border: 2px solid #ffa94d;
+    color: #ffa94d;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: all 0.3s ease-in-out;
+  }
+  .btn-outline-primary:hover {
+    background-color: #ffa94d;
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 165, 0, 0.3);
+    transform: translateY(-1px);
+  }
+  .btn-add-buy:hover {
+    background-color: #ff7f0e; /* پرتقالی پررنگ و شاد */
+    border-color: #ff7f0e;
+    color: #fff5e6;
+    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+    transform: translateY(-2px);
+  }
+
+  
+  /* باکس توضیح پایین کارت */
+  .product-description-hover {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background-color: #08b0642e; /* صورتی خیلی روشن */
+    border: 1px solid #75cd97;
+    color: #15413b;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    direction: rtl;
+    text-align: right;
+    pointer-events: none;
+  }
+  
+  /* فعال شدن موقع هاور روی کارت */
+  .card-wrapper:hover .product-description-hover {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  /* کارت فیلتر دسته‌بندی با زمینه سبز پاستیلی */
+.card.shadow-sm.p-3 {
+    background-color: #ddf0dfb3; /* سبز پاستیلی ملایم */
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.1);
+  }
+  
+  /* تیتر فیلتر */
+  .card.shadow-sm.p-3 h5 {
+    color: #13ba1c; /* سبز تیره برای کنتراست */
+  }
+  

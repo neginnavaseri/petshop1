@@ -1,5 +1,5 @@
 .card-title {
-  font-size: 1.2rem;
+  font-size: 1.2rem !important;
 }
 
 
@@ -14,7 +14,11 @@ img {
 }
 
 .slider-row {
-  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out !important;
+  -webkit-transition: transform 1s ease-in-out !important;
+  -moz-transition: transform 1s ease-in-out !important;
+  -ms-transition: transform 1s ease-in-out !important;
+  -o-transition: transform 1s ease-in-out !important;
 }
 
 /* دکمه‌های اسلایدر با استایل cute-orange */
@@ -47,92 +51,145 @@ img {
 
 /* دکمه افزودن به سبد خرید */
 .btn.cute-orange-btn {
-  border-radius: 999px; /* این باعث میشه دکمه کپسولی بشه */
-  background: linear-gradient(135deg, #ffb347, #ffcc33);
+  border-radius: 999px !important;
+  /*اینباعثمیشهدکمهکپسولیبشه*/background: linear-gradient(135deg, #ffb347, #ffcc33);
   color: #fff !important;
-  font-weight: bold;
-  padding: 10px 24px;
-  font-size: 0.95rem;
-  border: none;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 12px rgba(255, 180, 0, 0.4);
+  font-weight: bold !important;
+  padding: 12px 24px !important;
+  font-size: 0.95rem !important;
+  border: none !important;
+  transition: all 0.3s ease-in-out !important;
+  box-shadow: 0 4px 12px rgba(255, 180, 0, 0.4) !important;
+  -webkit-transition: all 0.3s ease-in-out !important;
+  -moz-transition: all 0.3s ease-in-out !important;
+  -ms-transition: all 0.3s ease-in-out !important;
+  -o-transition: all 0.3s ease-in-out !important;
+  -webkit-border-radius: 999px !important;
+  -moz-border-radius: 999px !important;
+  -ms-border-radius: 999px !important;
+  -o-border-radius: 999px !important;
 }
 
 .cute-orange-btn:hover {
-  background: linear-gradient(135deg, #ff9900, #ff6600);
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(255, 102, 0, 0.5);
+  background: linear-gradient(135deg, #ff9900, #ff6600) !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 8px 16px rgba(255, 102, 0, 0.5) !important;
+  -webkit-transform: scale(1.05) !important;
+  -moz-transform: scale(1.05) !important;
+  -ms-transform: scale(1.05) !important;
+  -o-transform: scale(1.05) !important;
 }
 
 .cute-orange-btn:active {
-  transform: scale(0.97);
+  transform: scale(0.97) !important;
+  -webkit-transform: scale(0.97) !important;
+  -moz-transform: scale(0.97) !important;
+  -ms-transform: scale(0.97) !important;
+  -o-transform: scale(0.97) !important;
 }
 
 /* کارت ثابت */
 
 .card.text-center.h-100.shadow {
-  border-radius: 50px;
-  padding: 24px 16px;
-  background: linear-gradient(135deg, #fffaf0, #ffe4b5);
-  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.2);
-  transition: all 0.4s ease-in-out;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
+  border-radius: 50px!important;
+  padding: 24px 16px !important;
+  background: linear-gradient(135deg, #fffaf0, #ffe4b5) !important;
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.2) !important;
+  transition: all 0.4s ease-in-out !important;
+  -webkit-border-radius: 50px!important;
+  -moz-border-radius: 50px!important;
+  -ms-border-radius: 50px!important;
+  -o-border-radius: 50px!important;
+  -webkit-transition: all 0.4s ease-in-out !important;
+  -moz-transition: all 0.4s ease-in-out !important;
+  -ms-transition: all 0.4s ease-in-out !important;
+  -o-transition: all 0.4s ease-in-out !important;
 }
 
 .card.text-center.h-100.shadow:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(255, 165, 0, 0.3);
+  transform: translateY(-4px) !important;
+  box-shadow: 0 10px 28px rgba(255, 165, 0, 0.3) !important;
+  -webkit-transform: translateY(-4px) !important;
+  -moz-transform: translateY(-4px) !important;
+  -ms-transform: translateY(-4px) !important;
+  -o-transform: translateY(-4px) !important;
 }
 
 .card.text-center.h-100.shadow img {
-  margin-top: 8px;
-  margin-bottom: 12px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 8px !important;
+  margin-bottom: 12px !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  -webkit-border-radius: 16px !important;
+  -moz-border-radius: 16px !important;
+  -ms-border-radius: 16px !important;
+  -o-border-radius: 16px !important;
 }
 
 .card.text-center.h-100.shadow .btn {
-  margin-top: 6px;
+  margin-top: 6px !important;
 }
 
 .card-img-wrapper {
-  position: relative;
-  overflow: hidden;
+  position: relative !important;
+  overflow: hidden !important;
 }
-
 .card-icons {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  gap: 1rem;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: 2;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  display: flex !important;
+  gap: 1rem !important;
+  opacity: 0 !important;
+  transition: opacity 0.4s ease !important;
+  z-index: 2 !important;
+  -webkit-transition: opacity 0.4s ease !important;
+  -moz-transition: opacity 0.4s ease !important;
+  -ms-transition: opacity 0.4s ease !important;
+  -o-transition: opacity 0.4s ease !important;
+  -webkit-transform: translate(-50%, -50%) !important;
+  -moz-transform: translate(-50%, -50%) !important;
+  -ms-transform: translate(-50%, -50%) !important;
+  -o-transform: translate(-50%, -50%) !important;
 }
 
-.card-icons span {
-  background-color: #fff;
-  color: #ff6f00;
-  border-radius: 50%;
-  padding: 10px;
-  font-size: 1.2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  transition: transform 0.3s ease;
+/* استایل کلی برای آیکون‌های داخل کارت، چه span باشه چه Link */
+.card-icon {
+  background-color: #fff !important;
+  color: #ff6f00 !important;
+  border-radius: 50% !important;
+  padding: 10px !important;
+  font-size: 1.2rem !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  cursor: pointer !important;
+  transition: transform 0.3s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  -webkit-transition: transform 0.3s ease !important;
+  -moz-transition: transform 0.3s ease !important;
+  -ms-transition: transform 0.3s ease !important;
+  -o-transition: transform 0.3s ease !important;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  -ms-border-radius: 50% !important;
+  -o-border-radius: 50% !important;
 }
 
-.card-icons span:hover {
-  transform: scale(1.2);
-  background-color: #ffe0b2;
+.card-icon:hover {
+  transform: scale(1.2) !important;
+  background-color: #ffe0b2 !important;
+  -webkit-transform: scale(1.2) !important;
+  -moz-transform: scale(1.2) !important;
+  -ms-transform: scale(1.2) !important;
+  -o-transform: scale(1.2) !important;
 }
+
 
 .card-img-wrapper:hover .card-icons {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 

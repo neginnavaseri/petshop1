@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import './ProductList.css';
+import { Link } from "react-router-dom";
+import './Cart.js';
+import { toast } from "react-toastify";
 
 const products = [
   { id: 1, name: "غذای خشک گربه نوع یک", price: "400.000 تومان", images: "/images/cat1.jpg" },
@@ -9,6 +12,7 @@ const products = [
   { id: 5, name: "غذای خشک گربه نوع پنج", price: "400.000 تومان", images: "/images/cat5.jpg" },
   { id: 6, name: "غذای خشک گربه نوع شش", price: "400.000 تومان", images: "/images/cat6.jpg" },
 ];
+
 
 function ProductSliderWithStaticCard() {
   const [startIndex, setStartIndex] = useState(0);
@@ -46,12 +50,27 @@ function ProductSliderWithStaticCard() {
   };
 
   const visibleProducts = products.slice(startIndex, startIndex + 3);
+  const addToCart = (product) => {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const existingProduct = cartItems.find((item) => item.id === product.id);
+  
+    if (existingProduct) {
+      existingProduct.quantity += 1;
+    } else {
+      cartItems.push({ ...product, quantity: 1 });
+    }
+  
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    toast.success("محصول با موفقیت اضافه شد ");
 
+
+  };
+  
   return (
     <div className="container my-4">
       <div className="row g-3">
-        {/* کارت ثابت */}
-        <div className="col-md-3">
+                {/* کارت ثابت */}
+                <div className="col-md-3">
           <div className="card text-center h-100 shadow">
             <div className="card-body d-flex flex-column justify-content-between">
               <div>
@@ -99,7 +118,7 @@ function ProductSliderWithStaticCard() {
         {product.price}
       </p>
     </div>
-    <button className="btn cute-orange-btn mt-3">
+    <button className="btn cute-orange-btn mt-3" onClick={() => addToCart(product)}>
       افزودن به سبد خرید
     </button>
   </div>
@@ -120,6 +139,7 @@ function ProductSliderWithStaticCard() {
           </div>
         </div>
       </div>
+
       {/* بخش برندها */}
       <div className="brand-cloud mt-5">
   <div className="extra-cloud"></div>
@@ -373,80 +393,83 @@ function ProductSliderWithStaticCard() {
   <div className="row">
     {/* عکس اول */}
     <div className="col-md-4 mb-4">
-      <div
-        className="card border-0 shadow h-100 d-flex align-items-center justify-content-center"
-        style={{
-          backgroundColor: "#ffe5b4", // پرتقالی روشن
-          borderRadius: "20px",
-          padding: "10px",
-          
-        }}
-        
-      >
-        <img
-          src="/images/Group1.png"
-          alt="گالری ۱"
-          className="img-fluid"
+      <Link to="/shop" className="text-decoration-none">
+        <div
+          className="card border-0 shadow h-100 d-flex align-items-center justify-content-center"
           style={{
-            height: "250px",
-            objectFit: "cover",
-            borderRadius: "15px",
-            boxShadow: "0 6px 15px rgba(0,0,0,0.2)",
+            backgroundColor: "#ffe5b4",
+            borderRadius: "20px",
+            padding: "10px",
           }}
-        />
-      </div>
+        >
+          <img
+            src="/images/Group1.png"
+            alt="گالری ۱"
+            className="img-fluid"
+            style={{
+              height: "250px",
+              objectFit: "cover",
+              borderRadius: "15px",
+              boxShadow: "0 6px 15px rgba(0,0,0,0.2)",
+            }}
+          />
+        </div>
+      </Link>
     </div>
 
     {/* عکس دوم */}
     <div className="col-md-4 mb-4">
-      <div
-        className="card border-0 shadow h-100 d-flex align-items-center justify-content-center"
-        style={{
-          backgroundColor: "#ffe5b4",
-          borderRadius: "20px",
-          padding: "10px",
-        }}
-      >
-        <img
-          src="/images/Group2.png"
-          alt="گالری ۲"
-          className="img-fluid"
+      <Link to="/shop" className="text-decoration-none">
+        <div
+          className="card border-0 shadow h-100 d-flex align-items-center justify-content-center"
           style={{
-            height: "250px",
-            objectFit: "cover",
-            borderRadius: "15px",
-            boxShadow: "0 6px 15px rgba(0,0,0,0.2)",
+            backgroundColor: "#ffe5b4",
+            borderRadius: "20px",
+            padding: "10px",
           }}
-        />
-      </div>
+        >
+          <img
+            src="/images/Group2.png"
+            alt="گالری ۲"
+            className="img-fluid"
+            style={{
+              height: "250px",
+              objectFit: "cover",
+              borderRadius: "15px",
+              boxShadow: "0 6px 15px rgba(0,0,0,0.2)",
+            }}
+          />
+        </div>
+      </Link>
     </div>
 
     {/* عکس سوم */}
     <div className="col-md-4 mb-4">
-      <div
-        className="card border-0 shadow h-100 d-flex align-items-center justify-content-center"
-        style={{
-          backgroundColor: "#ffe5b4",
-          borderRadius: "20px",
-          padding: "10px",
-        }}
-      >
-        <img
-          src="/images/Group3.png"
-          alt="گالری ۳"
-          className="img-fluid"
+      <Link to="/shop" className="text-decoration-none">
+        <div
+          className="card border-0 shadow h-100 d-flex align-items-center justify-content-center"
           style={{
-            height: "250px",
-            objectFit: "cover",
-            borderRadius: "15px",
-            boxShadow: "0 6px 15px rgba(0,0,0,0.2)",
+            backgroundColor: "#ffe5b4",
+            borderRadius: "20px",
+            padding: "10px",
           }}
-        />
-      </div>
+        >
+          <img
+            src="/images/Group3.png"
+            alt="گالری ۳"
+            className="img-fluid"
+            style={{
+              height: "250px",
+              objectFit: "cover",
+              borderRadius: "15px",
+              boxShadow: "0 6px 15px rgba(0,0,0,0.2)",
+            }}
+          />
+        </div>
+      </Link>
     </div>
   </div>
-</div>
-
+  </div>
  
     </div>
  

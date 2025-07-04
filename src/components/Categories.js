@@ -1,6 +1,6 @@
 import React from "react";
 import './Categories.css'; // استایل اختصاصی
-
+import { Link } from "react-router-dom"; 
 const categories = [
   {
     name: "غذای سگ‌ها",
@@ -38,9 +38,10 @@ function Categories() {
               />
               <div className="card-body py-3 px-2">
                 <h6 className="card-title fw-bold mb-2">{cat.name}</h6>
-                <a href="#" className="btn btn-outline btn-sm rounded-pill">
-                  {cat.linkText}
-                </a>
+                <Link to="/shop" className="btn btn-outline btn-sm rounded-pill">
+  {cat.linkText}
+</Link>
+
               </div>
             </div>
           </div>
