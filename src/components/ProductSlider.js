@@ -126,8 +126,8 @@ const Product = () => {
           className="card-icons"
           style={{
             position: "absolute",
-            top: "50%",
-            left: "50%",
+            top: "50% " ,
+            left: "42%",
             transform: "translate(-50%, -50%)",
             display: "flex",
             gap: "15px",
@@ -145,7 +145,7 @@ const Product = () => {
     width: "40px",
     height: "40px",
     borderRadius: "50%",
-    boxShadow: "0 3px 6px rgba(0, 0, 0, 0.1)",
+    boxShadow: "0 3px 6px rgba(0, 0, 0, 0.18)",
     color: "#ff6f00",
     fontSize: "18px",
     cursor: "pointer",

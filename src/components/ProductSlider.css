@@ -236,14 +236,14 @@
 }
 
 .icon-btn:hover {
-  background-color: #ff6f00;
+  background-color: #ff6f00e8 !important;
   color: white ;
 }
 
   .product-img {
     width: 250px;
     height: 250px;
-    object-fit: contain;
+    object-fit: cover !important;
     margin-bottom: 16px;
   }
   .product-name {

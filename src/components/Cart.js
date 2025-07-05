@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
   const [cartItems, setCartItems] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const items = JSON.parse(localStorage.getItem("cart")) || [];
@@ -61,7 +63,7 @@ function Cart() {
                       <p className="mb-1">تعداد: {item.quantity}</p>
                       <p className="fw-bold">
                         مجموع:{" "}
-                        {parseInt(item.price.replace(/\D/g, "")) * item.quantity} تومان
+                        {(parseInt(item.price.replace(/\D/g, "")) * item.quantity).toLocaleString()} تومان
                       </p>
                     </div>
                     <div>
@@ -91,9 +93,15 @@ function Cart() {
                 {calculateTotal().toLocaleString()} تومان
               </span>
             </h5>
-            <div className="d-flex justify-content-end mt-3">
+            <div className="d-flex justify-content-end gap-2 mt-3">
               <button className="btn btn-outline-danger" onClick={handleClearCart}>
                 🗑 پاک کردن سبد خرید
+              </button>
+              <button
+                className="btn btn-success"
+                onClick={() => navigate("/complete")}
+              >
+                🧾 نهایی‌سازی سفارش
               </button>
             </div>
           </div>
@@ -104,4 +112,3 @@ function Cart() {
 }
 
 export default Cart;
-

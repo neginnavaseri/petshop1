@@ -32,6 +32,7 @@ import DogFoodArticle from './components/DogFoodArticle';
 import DogCareGuide from './components/DogCareGuide';
 import ShopPage from './components/ShopPage';
 import Cart from './components/Cart';
+import OrderComplete from "./components/OrderComplete";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -86,6 +87,7 @@ function App() {
           <Route path="/articles/dog-care" element={<PageLayoutWithNavbar><DogCareGuide /></PageLayoutWithNavbar>} />
           <Route path="/shop" element={<PageLayoutWithNavbar><ShopPage /></PageLayoutWithNavbar>} />
           <Route path="/cart" element={<PageLayoutWithNavbar><Cart /></PageLayoutWithNavbar>} />
+          <Route path="/complete" element={<PageLayoutWithNavbar><OrderComplete /></PageLayoutWithNavbar>} />
         </Routes>
       </Router>
 
@@ -96,3 +98,4 @@ function App() {
 }
 
 export default App;
+

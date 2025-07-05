@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+
+import React, { useState, useEffect } from "react";
+
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 
@@ -7,6 +9,25 @@ function Navbar() {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [cartCount, setCartCount] = useState(0);
+
+  // دریافت تعداد آیتم‌ها از localStorage و به‌روزرسانی هر بار که تغییر کنه
+  useEffect(() => {
+    const updateCartCount = () => {
+      const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+      const count = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+      setCartCount(count);
+    };
+
+    updateCartCount();
+
+    // اضافه کردن listener برای تغییرات localStorage (اگر توی تب‌های مختلف باز باشه)
+    window.addEventListener("storage", updateCartCount);
+
+    return () => {
+      window.removeEventListener("storage", updateCartCount);
+    };
+  }, []);
 
   const handleLogin = (e) => {
     e.preventDefault();

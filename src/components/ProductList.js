@@ -74,70 +74,80 @@ function ProductSliderWithStaticCard() {
           <div className="card text-center h-100 shadow">
             <div className="card-body d-flex flex-column justify-content-between">
               <div>
-                <h5 className="card-title text-danger fw-bold">آف پت وودمارت</h5>
+                <h2 className="card-title text-danger fw-bold mt-5">آف پت وودمارت</h2>
               </div>
               <div>
-                <button className="btn btn-warning my-3 fw-bold">اینجا کلیک کنید</button>
+                <Link to="/shop">
+                <button className="btn cute-orange-btn">اینجا کلیک کنید</button>
+                </Link>
               </div>
               <div>
                 <img
                   src="/images/offer.png"
                   alt="پت شاپ"
-                  className="card-img-top mt-3"
+                  className="card-img-center mt-3"
                 />
               </div>
             </div>
           </div>
         </div>
-
         {/* اسلایدر کارت‌ها */}
-        <div className="col-md-9">
-          <div className="row slider-row transition">
-            {visibleProducts.map((product) => (
-              <div className="col-md-4" key={product.id}>
-                <div className="card h-100 shadow-sm position-relative overflow-hidden">
-  <div className="card-img-wrapper position-relative">
-    <img
-      src={product.images}
-      alt={product.name}
-      className="card-img-top"
-    />
-    <div className="card-icons">
-      <span className="icon-like">
-        <i className="bi bi-heart-fill"></i>
-      </span>
-      <span className="icon-search">
-        <i className="bi bi-search"></i>
-      </span>
-    </div>
+<div className="col-md-9 ">
+  <div className="row slider-row transition gy-5 gx-5 ">
+    {visibleProducts.map((product) => (
+      <div className="col-md-4" key={product.id}>
+        <div className="card h-100 shadow-sm  overflow-hidden  ">
+          <div className="card-img-wrapper ">
+            <img
+              src={product.images}
+              alt={product.name}
+              className="card-img-top"
+            />
+
+            {/* آیکون‌ها */}
+            <div className="card-icons">
+              <button className="icon-btn like">
+                <i className="fas fa-heart"></i>
+              </button>
+              <Link to="/shop" style={{ textDecoration: "none" }}>
+                <button className="icon-btn zoom">
+                  <i className="fas fa-search"></i>
+                </button>
+              </Link>
+            </div>
+          </div>
+
+          {/* فقط یک بار card-body */}
+          <div className="card-body text-center  flex-column justify-content-between">
+            <div>
+              <h5 className="card-title">{product.name}</h5>
+              <p className="card-text text-success fw-bold">{product.price}</p>
+            </div>
+            <button
+              className="btn cute-orange-btn mt-3"
+              onClick={() => addToCart(product)}
+            >
+              افزودن به سبد خرید
+            </button>
+          </div>
+        </div>
+      </div>
+    ))}
   </div>
-  <div className="card-body text-center d-flex flex-column justify-content-between">
-    <div>
-      <h5 className="card-title">{product.name}</h5>
-      <p className="card-text text-success fw-bold">
-        {product.price}
-      </p>
-    </div>
-    <button className="btn cute-orange-btn mt-3" onClick={() => addToCart(product)}>
-      افزودن به سبد خرید
+
+  {/* دکمه‌های کنترل پایین */}
+  <div className="d-flex justify-content-center mt-3">
+    <button className="slider-btn me-2" onClick={handlePrev}>
+      قبلی
+    </button>
+    <button className="slider-btn" onClick={handleNext}>
+      بعدی
     </button>
   </div>
 </div>
 
-              </div>
-            ))}
-          </div>
 
-          {/* دکمه‌های کنترل پایین */}
-          <div className="d-flex justify-content-center mt-3">
-            <button className="slider-btn me-2" onClick={handlePrev}>
-              قبلی
-            </button>
-            <button className="slider-btn" onClick={handleNext}>
-              بعدی
-            </button>
-          </div>
-        </div>
+
       </div>
 
       {/* بخش برندها */}

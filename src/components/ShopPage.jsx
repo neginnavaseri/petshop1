@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./ShopPage.css";
 
@@ -13,7 +13,7 @@ const products = [
   { id: 7, name: 'غذای خشک گربه نوع 5', category: 'غذای گربه', price: '120,000 تومان', image: '/images/cat5.jpg', description: 'با ویتامین‌های ضروری برای سلامت پوست و مو.' },
   { id: 8, name: 'غذای خشک گربه نوع 6', category: 'غذای گربه', price: '210,000 تومان', image: '/images/cat6.jpg', description: 'مناسب برای گربه‌های حساس با هضم آسان.' },
   { id: 9, name: 'غذای خشک سگ', category: 'غذای سگ', price: '310,000 تومان', image: '/images/cart7.jpg', description: 'انرژی‌زا و خوش‌طعم برای سگ‌های پرانرژی.' },
-  { id: 10, name: 'غذای خشک پرندگان', category: 'پرندگان', price: '40,000 تومان', image: '/images/cart8.jpg', description: 'ترکیب مغذی برای پرندگان خانگی شاداب.' },
+  { id: 10, name: 'غذای خشک پرندگان', category: 'پرندگان', price: '40,000 تومان', image: '/images/اوشکایا-عروس-کارتنی.jpg', description: 'ترکیب مغذی برای پرندگان خانگی شاداب.' },
   { id: 11, name: 'غذای مولتی پلاس سگ', category: 'غذای سگ', price: '550,000 تومان', image: '/images/cart9.jpg', description: 'مولتی ویتامین کامل برای سلامت سگ دلبندت.' },
   { id: 12, name: 'غذای مرطوب پرندگان', category: 'پرندگان', price: '90,000 تومان', image: '/images/cart10.png', description: 'مرطوب، خوشمزه و مقوی برای انواع پرندگان.' },
   { id: 13, name: 'غذای ماهی قرمز', category: 'ماهی', price: '135,000 تومان', image: '/images/cart11.jpg', description: 'برای رنگ درخشان و سلامت بیشتر ماهی‌ها.' },
@@ -25,6 +25,7 @@ const categories = ['همه', 'غذای گربه', 'غذای سگ', 'حمل‌و
 
 const ShopPage = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const getCategoryFromURL = () => {
     const params = new URLSearchParams(location.search);
@@ -54,7 +55,25 @@ const ShopPage = () => {
     }
 
     localStorage.setItem('cart', JSON.stringify(cartItems));
-    toast.success(`${product.name} به سبد خرید اضافه شد 🛒`);
+
+    toast.success(
+      <div>
+         «{product.name}» به سبد خرید اضافه شد!
+        <div className="mt-2">
+          <button className="btn btn-sm btn-primary" onClick={() => {
+            navigate("/cart");
+            toast.dismiss();
+          }}>
+            ادامه سفارش 🧾
+          </button>
+        </div>
+      </div>,
+      {
+        position: "bottom-left",
+        autoClose: 5000,
+        closeOnClick: false,
+      }
+    );
   };
 
   return (
@@ -87,9 +106,9 @@ const ShopPage = () => {
                     onMouseLeave={() => setHoveredProductId(null)}
                   >
                     <div className="card h-100 shadow-sm">
-                      <img src={product.image} className="card-img-top" alt={product.title} />
+                      <img src={product.image} className="card-img-top" alt={product.name} />
                       <div className="card-body d-flex flex-column justify-content-between">
-                        <h5 className="card-title">{product.title}</h5>
+                        <h5 className="card-title">{product.name}</h5>
                         <p className="card-text fw-bold text-success">{product.price}</p>
                         <button className="btn btn-add-buy mt-auto" onClick={() => addToCart(product)}>
                           🛒 افزودن به سبد خرید
@@ -115,4 +134,5 @@ const ShopPage = () => {
 };
 
 export default ShopPage;
+
 
