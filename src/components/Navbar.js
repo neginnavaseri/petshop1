@@ -75,8 +75,8 @@ function Navbar() {
             <a className="navbar-brand mx-auto" href="/">
               <img src="/images/Group-258-2.png" alt="Logo" style={{ height: "40px" }} />
             </a>
-            <a href="/cart" className="my-icon-link" style={{ fontSize: "1.4rem" }}>
-              <i className="bi bi-cart"></i>
+            <a href="/cart" className="my-icon-link" style={{ fontSize: "2rem" }}>
+              <i className="bi bi-cart "></i>
             </a>
           </div>
 

@@ -57,7 +57,7 @@ const CatBreedsArticle = () => {
 
   return (
     <>
-      <Navbar />
+    
 
       <div className="container my-5 d-flex justify-content-center">
         <div
@@ -228,7 +228,7 @@ const CatBreedsArticle = () => {
         </form>
       </div>
 
-      <Footer />
+     
     </>
   );
 };

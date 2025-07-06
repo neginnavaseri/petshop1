@@ -67,7 +67,7 @@ const DogFoodArticle = () => {
 
   return (
     <>
-      <Navbar />
+      
 
       <div className="container my-5 d-flex justify-content-center">
         <div className="card mb-2" style={{ maxWidth: '700px', width: '100%' }}>
@@ -197,7 +197,7 @@ const DogFoodArticle = () => {
         </div>
       </div>
 
-      <Footer />
+      
     </>
   );
 };

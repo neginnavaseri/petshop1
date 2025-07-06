@@ -42,7 +42,7 @@ const DogBreedsArticle = () => {
 
   return (
     <>
-      <Navbar />
+      
 
       {/* عکس بالای مقاله */}
       <div className="container my-5 d-flex justify-content-center">
@@ -229,7 +229,7 @@ const DogBreedsArticle = () => {
         </div>
       </div>
 
-      <Footer />
+      
     </>
   );
 };
