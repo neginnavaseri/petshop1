@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/petshop1/static/css/main.04a916f8.css",
+    "main.js": "/petshop1/static/js/main.88d56bf8.js",
+    "static/media/fa-solid-900.ttf": "/petshop1/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
+    "static/media/fa-brands-400.ttf": "/petshop1/static/media/fa-brands-400.1815e00441357e01619e.ttf",
+    "static/media/bootstrap-icons.woff?": "/petshop1/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
+    "static/media/fa-solid-900.woff2": "/petshop1/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
+    "static/media/bootstrap-icons.woff2?": "/petshop1/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
+    "static/media/fa-brands-400.woff2": "/petshop1/static/media/fa-brands-400.c210719e60948b211a12.woff2",
+    "static/media/fa-regular-400.ttf": "/petshop1/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
+    "static/media/fa-regular-400.woff2": "/petshop1/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
+    "static/media/revicons.eot": "/petshop1/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/petshop1/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/fa-v4compatibility.ttf": "/petshop1/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
+    "static/media/revicons.woff": "/petshop1/static/media/revicons.e8746a624ed098489406.woff",
+    "static/media/fa-v4compatibility.woff2": "/petshop1/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
+    "index.html": "/petshop1/index.html",
+    "main.04a916f8.css.map": "/petshop1/static/css/main.04a916f8.css.map",
+    "main.88d56bf8.js.map": "/petshop1/static/js/main.88d56bf8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04a916f8.css",
+    "static/js/main.88d56bf8.js"
+  ]
+}
